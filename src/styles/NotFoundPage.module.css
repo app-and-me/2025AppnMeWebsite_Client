@@ -1,0 +1,35 @@
+.all-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.btn-container {
+    width: 50px;
+    height: 28px;
+    border-radius: 6px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 0, 174);
+
+}
+
+.main-title {
+    font-size: 86px;
+}
+
+.sub-title {
+    font-size: 16px;
+    margin: 26px 0 84px 0;
+}
+
+.sub-title p {
+    color: #FFFFFF99;
+}
+
+.sub-title p:first-child {
+    margin-bottom: 10px;
+}
