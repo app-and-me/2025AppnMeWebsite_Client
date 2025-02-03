@@ -1,0 +1,50 @@
+.btn-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    max-width: 1200px;
+}
+
+.btn-container>div {
+    background: linear-gradient(-7.642439925348299e-8deg, var(--token-30ee69d1-cae6-4a5c-9af2-db5c94a12e77, rgba(255, 255, 255, 0.05)) 0%, var(--token-b456af2e-fd88-41ae-8686-ad7692875dfd, rgba(97, 97, 97, 0.09)) 100%);
+    color: #FFFFFF99;
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px;
+    white-space: nowrap;
+}
+
+.btn-container>div:last-child {
+    font-size: 16px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+/* .btn-container>div:last-child:hover {
+    opacity: 0.6;
+    backdrop-filter: blur(2.5px);
+} */
+
+@media (max-width: 768px) {
+    .btn-container {
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .btn-container>div {
+        padding: 10px 19px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn-container {
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .btn-container>div {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+}
