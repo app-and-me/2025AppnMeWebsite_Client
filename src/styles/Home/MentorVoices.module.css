@@ -1,0 +1,43 @@
+.all-container {
+    background: linear-gradient(0.07383128568086761deg, var(--token-f5219c3a-5ee2-4639-9e23-4bdcf5509ebd, rgba(0, 85, 255, 0.15)) 0%, var(--token-b456af2e-fd88-41ae-8686-ad7692875dfd, rgba(97, 97, 97, 0.09)) 100%);
+    border-radius: 20px;
+    padding: 0 30px;
+    opacity: 1;
+    width: 100%;
+    max-width: 370px;
+}
+
+.all-container img {
+    width: 100%;
+    max-width: 50px;
+}
+
+.memberInfo-container {
+    padding: 37px 0;
+}
+
+.message {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 310px;
+    color: #FFFFFF80;
+}
+
+.major {
+    font-size: 16px;
+    color: #FFFFFF99;
+}
+
+.dotContainer {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    margin-bottom: 10px;
+}
+
+.dot {
+    border-radius: 30px;
+    width: 4.7px;
+    height: 5px;
+    background-color: white;
+}
