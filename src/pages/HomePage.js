@@ -1,6 +1,8 @@
 import React from "react";
 import MentorVoicesCard from "../components/Home/MentorVoicesCard";
-
+import JoinUsNow from "../components/Common/JoinUsNow";
+// import FaQList from "../components/QnA/FaQList";
+import FaQTitle from "../components/QnA/FaQTitle";
 
 export default function HomePage() {
     return (
@@ -12,6 +14,9 @@ export default function HomePage() {
                 major={"소프트웨어과"}
                 name={"추다율"}
             />
+            <FaQTitle />
+            {/* <FaQList /> */}
+            <JoinUsNow />
         </div>
     )
 }
