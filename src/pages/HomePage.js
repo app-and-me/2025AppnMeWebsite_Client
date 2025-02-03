@@ -1,4 +1,5 @@
 import React from "react";
+import MainTitle from "../components/Home/MainTitle/MainTitle";
 import MentorVoicesCard from "../components/Home/MentorVoicesCard";
 import JoinUsNow from "../components/Common/JoinUsNow";
 // import FaQList from "../components/QnA/FaQList";
@@ -7,6 +8,7 @@ import MainActivity from "../components/Home/Activity/MainActivity";
 export default function HomePage() {
     return (
         <div>
+            <MainTitle />
             <MainActivity />
             <MentorVoicesCard
                 profileImg={"/images/Member/member1.png"}
