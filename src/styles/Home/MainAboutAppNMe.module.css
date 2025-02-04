@@ -1,0 +1,55 @@
+.Container {
+    display: flex;
+    gap: 84px;
+}
+
+.Container img {
+    width: 100%;
+    max-width: 506px;
+    height: 512px;
+    border-radius: 19px;
+}
+
+.title-container {
+    margin-top: 50px;
+}
+
+.mirim {
+    font-size: 34px;
+    color: #FFFFFF99;
+    margin: 58px 0 10px 0;
+}
+
+.content {
+    margin: 10px 0 66px 0;
+}
+
+@media (max-width: 1024px) {
+    .Container {
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .Container img {
+        max-width: 80%;
+        height: 406px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .Container {
+        gap: 20px;
+    }
+
+    .Container img {
+        max-width: 100%;
+        height: 340px;
+    }
+
+    .mirim {
+        font-size: 16px;
+
+    }
+}
