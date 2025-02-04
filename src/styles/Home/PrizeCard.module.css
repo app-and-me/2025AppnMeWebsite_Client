@@ -1,0 +1,29 @@
+.card-all-container {
+    width: 100%;
+    max-width: 588px;
+    height: 538px;
+    border-radius: 20px;
+    padding: 40px;
+    background: linear-gradient(308deg, rgba(0, 0, 0, 0.08) 0%, rgba(255, 0, 174, 0.03) 52.43238844313063%, var(--token-73242b55-57d1-4320-8897-28085a430c83, rgba(255, 255, 255, 0.02)) 100%);
+}
+
+.card-container img {
+    width: 100%;
+    max-width: 508px;
+    height: 345px;
+    border-radius: 20px;
+}
+
+.detail-container {
+    display: flex;
+    gap: 10px;
+}
+
+.prizeName {
+    font-size: 18px;
+    margin: 20px 0 28px 0;
+}
+
+.detail-container p:first-child {
+    margin-right: 5px;
+}
