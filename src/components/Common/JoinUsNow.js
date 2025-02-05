@@ -7,6 +7,7 @@ export default function JoinUsNow() {
     const navigate = useNavigate();
     const handleClick = () => { navigate("/JoinUs") }
     return (
+        <div className={styles.main}>
         <div className={styles["all-container"]}>
             <div className={styles["introduction"]}>
                 <div className={styles.dot}><DotTitle dotTitle={"Join Us Now"} /></div>
@@ -19,6 +20,7 @@ export default function JoinUsNow() {
             }}>
                 <Button text={"지금 바로 지원하기"} width={"150px"} height={"46px"} borderRadius={"10px"} onClick={handleClick} />
             </div>
+        </div>
         </div>
     )
 }

@@ -11,6 +11,7 @@ const Container = styled.div`
     height: 38px;
     width: fit-content; 
     padding: 6px 14px;
+    backdrop-filter: blur(2.5px);
 `
 
 const Dot = styled.div`
