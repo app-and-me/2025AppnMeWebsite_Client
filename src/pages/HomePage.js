@@ -11,6 +11,7 @@ export default function HomePage() {
     return (
         <div>
             <MainTitle />
+            
             <MainAboutAppNMe />
             <MainActivity />
             <PrizeCard />

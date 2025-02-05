@@ -11,7 +11,7 @@ export default function MainAboutAppNMe() {
     }
     return (
         <div className={styles.Container}>
-            <img src="images/subLogo.png"></img>
+            <img src="images/Logo/subLogo.png"></img>
 
             <div className={styles["title-container"]}>
                 <DotTitle dotTitle={"About App & Me"} />
