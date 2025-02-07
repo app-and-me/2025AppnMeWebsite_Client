@@ -11,7 +11,7 @@ export default function QnAPage() {
     return (
         <div className={styles["all-container"]}>
             <TitleCard
-                btnText={"14기"} btnWeight={"41px"} btnHeight={"28px"} borderRadius={"6px"}
+                btnText={"14기"} btnWeight={"41px"} btnHeight={"28px"} borderRadius={"6px"} fontSize={"12px"}
                 infoTitle="Let's Work Together"
                 mainTitle={"QnA 게시판 입니다!"}
                 subTitle1={"자유롭게 질문해주세요!"}
