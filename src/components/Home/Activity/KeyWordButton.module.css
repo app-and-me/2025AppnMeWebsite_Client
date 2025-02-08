@@ -24,11 +24,15 @@
     opacity: 0.6;
     backdrop-filter: blur(2.5px);
 } */
-
-@media (max-width: 768px) {
+@media (max-width:1024px) {
+    .btn-container{
+        padding: 0 50px;
+    }
+}
+@media (max-width: 600px) {
     .btn-container {
         gap: 12px;
-        padding: 12px;
+        padding: 0 30px
     }
 
     .btn-container>div {
@@ -39,8 +43,7 @@
 
 @media (max-width: 480px) {
     .btn-container {
-        gap: 10px;
-        padding: 10px;
+        gap: 10px; 
     }
 
     .btn-container>div {

@@ -26,7 +26,7 @@ export default function NotFound() {
                 <p>exist. Please click the below button to get back to the home.</p>
             </div>
             <div style={{ display: "flex", justifyContent: "center" }}>
-                <Button width={"170px"} height={"46px"} text={"Back To Homepage"} onClick={handleclick} /></div>
+                <Button width={"170px"} height={"46px"} text={"Back To Homepage"} onClick={handleclick} borderRadius={"10px"}/></div>
         </div>
     )
 }

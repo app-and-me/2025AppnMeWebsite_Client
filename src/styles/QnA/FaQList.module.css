@@ -1,0 +1,24 @@
+.all-container {
+    width: 100%;
+    max-width: 690px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    row-gap: 24px;
+}
+
+.qnaList-container {
+
+    border-radius: 20px;
+    background-color: #000;
+    font-size: 18px;
+    height: 86px;
+    padding: 30px;
+    border: 1px solid var(--token-22cf3d5b-05c3-4cf9-9506-44947f466e1e, rgba(255, 255, 255, 0.15));
+}
+
+.title-container {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}

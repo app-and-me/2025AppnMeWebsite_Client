@@ -9,12 +9,17 @@ export default function MainTitle() {
     const ImgStyle = styled.div`
         width: 100%;
         max-width: 409px;
-        height: 77px;
         margin: 34px 0 26px 0;
+        @media (max-width: 700px) {
+             
+                width: 100%;
+                max-width: 257px;
+           
+        }
     ` 
     const navigate = useNavigate();
     const onClick = () => {
-        navigate("/AboutUs")
+        navigate("/JoinUs")
     }
     return (
         <div className={styles.allContainer}>
