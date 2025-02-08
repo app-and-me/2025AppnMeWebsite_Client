@@ -18,20 +18,40 @@
     font-size: 16px;
     color: #FFFFFF99;
 }
- 
-.subTitle { 
+
+.subTitle {
     flex-wrap: wrap;
     margin: 30px 0 40px 0;
 }
 
-@media (max-width:600px) {
-    .allContainer{
-        padding: 0 30px;
-    }
-    .mainTitle p{
+@media (max-width:1200px) {
+    /* .allContainer {
+        padding: 0 120px;
+    } */
+}
+
+@media (max-width:800px) {
+    .mainTitle p {
         font-size: 35px;
     }
-    .subTitle p{
+}
+
+@media (max-width:700px) {
+    /* .allContainer {
+        padding: 0 50px;
+    } */
+}
+
+@media (max-width:600px) {
+    /* .allContainer {
+        padding: 0 30px;
+    } */
+
+    .mainTitle p {
+        font-size: 35px;
+    }
+
+    .subTitle p {
         width: auto;
     }
 }

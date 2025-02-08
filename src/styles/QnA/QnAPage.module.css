@@ -15,3 +15,9 @@
 .qna-title {
     font-size: 54px;
 }
+
+@media (max-width:850px) {
+    .qna-title {
+        font-size: 35px;
+    }
+}

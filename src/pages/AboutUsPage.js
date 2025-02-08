@@ -1,9 +1,12 @@
 import React from "react";
 import TitleCard from "../components/Common/TitleCard";
 import Banner from "../components/Home/MainTitle/Banner";
-import FaQTitle from "../components/QnA/FaQTitle";
+import SectionBlock from "../components/Home/SectionBlock"
+import FaQ from "../components/QnA/FaQ";
 import JoinUsNow from "../components/Common/JoinUsNow";
 // import ProfileCard from "../components/AboutUs/ProfileCard";
+import styles from "../styles/Home/Pages/AboutUsPage.module.css"
+
 export default function AboutUsPage() {
     return (
         <div>
@@ -19,12 +22,21 @@ export default function AboutUsPage() {
                 subTitle2={"다음의 앱앤미가 될 14기 부원들을 기다리고 있답니다."}
             />
             </div>
+            </div>
             
+            <div className={styles.sectionBlock}>
+            <SectionBlock  marginBottom={"100px"}
+            dotTitle={"Team Members"}  title1={"App & Me 12기"}/>
             </div>
 
-
             {/* <ProfileCard /> */}
-            <FaQTitle />
+
+            <div className={styles.sectionBlock13}>
+            <SectionBlock  marginBottom={"100px"}
+            dotTitle={"Team Members"} title1={"App & Me 13기"}  />
+            </div>
+
+            <FaQ />
             <JoinUsNow />
         </div>
     )

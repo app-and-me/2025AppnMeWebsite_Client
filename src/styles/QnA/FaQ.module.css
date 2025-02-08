@@ -1,0 +1,18 @@
+.allContainer {
+    display: flex;
+    justify-content: center;
+    column-gap: 60px;
+    margin: 50px 0 120px 0;
+}
+
+@media (max-width:1200px) {
+    .allContainer {
+        flex-direction: column;
+    }
+}
+
+@media (max-width:700px) {
+    .allContainer {
+        margin: 10px 0 0;
+    }
+}

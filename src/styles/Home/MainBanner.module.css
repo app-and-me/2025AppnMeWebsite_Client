@@ -1,18 +1,19 @@
 .allContainer {
     /*padding-left: 120px;*/
     position: relative;
-    display: flex;  
+    display: flex;
     align-items: center;
-    height: 506px;  
-    overflow: hidden;  
+    height: 506px;
+    overflow: hidden;
 }
 
 .MainTitleContainer {
-    position: absolute;  
+    position: absolute;
     z-index: 1;
     color: white;
-} 
-.infoTitle{
+}
+
+.infoTitle {
     margin-top: 20px;
     display: flex;
     align-items: center;
@@ -23,4 +24,13 @@
     backdrop-filter: blur(2.5px);
     border-radius: 10px;
     border: 1px solid var(--token-30ee69d1-cae6-4a5c-9af2-db5c94a12e77, rgba(255, 255, 255, 0.05));
+}
+
+
+@media (max-width: 1024px) {}
+
+@media (max-width: 700px) {
+    .MainTitleContainer {
+        margin: auto;
+    }
 }

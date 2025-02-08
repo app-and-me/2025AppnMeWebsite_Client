@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 export default function MainAboutAppNMe() {
     const navigate = useNavigate()
     const handleClick = () => {
-        navigate("/JoinUsPage")
+        navigate("/JoinUs")
     }
     return (
         <div className={styles.Container}>
