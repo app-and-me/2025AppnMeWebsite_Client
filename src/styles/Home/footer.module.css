@@ -1,0 +1,44 @@
+.footer {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footerContent {
+    display: flex;
+    padding: 130px;
+    gap: 200px;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1700px;
+}
+
+.logoSection {
+    display: flex;
+    flex-direction: column;
+    gap: 400px;
+}
+
+img {
+    width: 120px;
+    height: 22px;
+}
+
+.pages, .social {
+   width: 49px;
+   height: 26px;
+    font-size: 18px;
+}
+
+li {
+    margin-top: 20px;
+    color: #aaaaaa;
+    font-size: 16px;
+}
+
+.web {
+    color: #aaaaaa;
+    font-size: 16px;
+}

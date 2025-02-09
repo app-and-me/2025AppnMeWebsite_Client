@@ -5,6 +5,8 @@ import JoinUsNow from "../components/Common/JoinUsNow";
 // import FaQList from "../components/QnA/FaQList";
 import FaQTitle from "../components/QnA/FaQTitle";
 import MainActivity from "../components/Home/Activity/MainActivity";
+import Footer from "../components/Home/footer";  // Footer 컴포넌트 import
+
 export default function HomePage() {
     return (
         <div>
@@ -20,6 +22,8 @@ export default function HomePage() {
             <FaQTitle />
             {/* <FaQList /> */}
             <JoinUsNow />
+            <Footer 
+            logoImg={"/images/logo.png"}/> 
         </div>
-    )
+    );
 }
