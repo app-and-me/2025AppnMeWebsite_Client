@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "../components/Common/Button";
+import Footer from "../components/Common/Footer";
 import styles from "../styles/NotFoundPage.module.css"
 
 export default function NotFound() {
@@ -26,7 +27,10 @@ export default function NotFound() {
                 <p>exist. Please click the below button to get back to the home.</p>
             </div>
             <div style={{ display: "flex", justifyContent: "center" }}>
-                <Button width={"170px"} height={"46px"} text={"Back To Homepage"} onClick={handleclick} borderRadius={"10px"}/></div>
+                <Button width={"170px"} height={"46px"} text={"Back To Homepage"} onClick={handleclick} borderRadius={"10px"}/>
+            </div>
+
+                <Footer/>
         </div>
     )
 }

@@ -2,6 +2,7 @@ import TitleCard from "../components/Common/TitleCard";
 import Banner from "../components/Home/MainTitle/Banner";
 import FaQ from "../components/QnA/FaQ";
 import JoinUsNow from "../components/Common/JoinUsNow";
+import Footer from "../components/Common/Footer";
 
 export default function PrizePage() {
     return (
@@ -22,6 +23,7 @@ export default function PrizePage() {
 
             <FaQ/>
             <JoinUsNow />
+            <Footer/>
         </div>
     )
 }

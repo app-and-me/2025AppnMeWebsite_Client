@@ -1,10 +1,11 @@
 import TitleCard from "../components/Common/TitleCard";
 import Button from "../components/Common/Button";
+import Footer from "../components/Common/Footer";
 export default function JoinUSPage() {
     return (
         <div>
             <TitleCard
-                btnText={"14rl"}
+                btnText={"14기"}
                 infoTitle="Let's Work Together"
                 btnWeight={"43px"}
                 btnHeight={"28px"}
@@ -18,7 +19,10 @@ export default function JoinUSPage() {
                     width={"156px"}
                     height={"46px"}
                     borderRadius={"10px"}
-                /></div>
+                />
+                </div>
+
+                <Footer/>
         </div>
     )
 }

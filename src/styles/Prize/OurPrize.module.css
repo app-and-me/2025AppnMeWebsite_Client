@@ -1,0 +1,36 @@
+.all-container {
+    display: flex;
+    justify-content: center;
+    gap: 84px;
+    margin: 208px 0 201px 0;
+}
+
+.logoImg {
+    width: 100%;
+    max-width: 506px;
+    height: 512px;
+}
+
+.btn-container {
+    margin: 30px 0 50px 0;
+}
+
+.history-container {
+    overflow: scroll;
+    max-height: 1500px;
+}
+
+
+@media (max-width: 1200px) {
+    .all-container {
+        flex-direction: column;
+    }
+
+    .logoImg {
+        display: none;
+    }
+
+    .history-container {
+        max-height: none;
+    }
+}

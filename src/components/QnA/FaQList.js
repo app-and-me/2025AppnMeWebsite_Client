@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "../../styles/QnA/FaQList.module.css"
+import styles from "../../styles/QnA/FaQList.module.css";
 
 const FaQData = [
     {
@@ -10,9 +10,8 @@ const FaQData = [
     {
         id: 2,
         title: "앱앤미 지원 자격이나 방법, 그리고 연락은 어떻게 하면 되나요?",
-        content: "지원 자격: 모든 과가 지원 가능합니다! 지원 방법 : 앱앤미 웹사이트를 이용하여 온라인 지원, 연락 : 질문은 웹사이트를 이용해 주시고 연락은 앱앤미 인스타(@app_and_me)로 디엠을 이용해 주세요!",
+        content: "지원 자격: 모든 과가 지원 가능합니다!\n지원 방법: 앱앤미 웹사이트를 이용하여 온라인 지원\n연락: 질문은 웹사이트를 이용해 주시고 연락은 앱앤미 인스타(@app_and_me)로 디엠을 이용해 주세요!",
     },
-
     {
         id: 3,
         title: "앱앤미는 어떤 역량을 가장 많이 보나요?",
@@ -26,30 +25,36 @@ const FaQData = [
     {
         id: 5,
         title: "앱앤미 면접 볼 때 꿀팁이 있나요?",
-        content: "앱앤미 면접 볼 때 꿀팁이 있나요?",
+        content: "자신감 있게, 그리고 솔직하게 대답하는 것이 중요합니다!",
     }
-]
+];
 
 export default function FaQList() {
-    const [openFaq, setOpenFaq] = useState(null);
+    const [openFaq, setOpenFaq] = useState([]);
 
     const toggleItem = (id) => {
-        setOpenFaq(openFaq === id ? null : id);
+        setOpenFaq((prev) =>
+            prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
+        );
     };
 
     return (
         <div className={styles["all-container"]}>
             {FaQData.map((item) => (
-                <div className={styles["qnaList-container"]}>
+                <div key={item.id} className={`${styles["qnaList-container"]} ${openFaq.includes(item.id) ? styles["open"] : ""}`}>
                     <div onClick={() => toggleItem(item.id)}>
                         <div className={styles["title-container"]}>
                             <span>{item.title}</span>
-                            {openFaq === item.id ? '×' : '+'}
+                            <span className={styles["toggle-icon"]}>{openFaq.includes(item.id) ? '×' : '+'}</span>
                         </div>
                     </div>
 
-                    {openFaq === item.id && (
-                        <div>{item.content}</div>
+                    {openFaq.includes(item.id) && (
+                        <div className={styles["faq-content"]}>
+                            {item.content.split("\n").map((line, index) => (
+                                <p key={index}>{line}</p>
+                            ))}
+                        </div>
                     )}
                 </div>
             ))}

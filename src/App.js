@@ -20,7 +20,7 @@ const Main = () => {
   return (
     <>
       <Routes>
-        <Route path="/Home" element={<HomePage />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/AboutUs" element={<AboutUsPage />} />
         <Route path="/Prize" element={<PrizePage />} />
         <Route path="/JoinUs" element={<JoinUSPage />} />

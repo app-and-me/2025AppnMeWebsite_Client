@@ -4,7 +4,8 @@ import Banner from "../components/Home/MainTitle/Banner";
 import SectionBlock from "../components/Home/SectionBlock"
 import FaQ from "../components/QnA/FaQ";
 import JoinUsNow from "../components/Common/JoinUsNow";
-// import ProfileCard from "../components/AboutUs/ProfileCard";
+import ProfileCard from "../components/AboutUs/ProfileCard";
+import Footer from "../components/Common/Footer";
 import styles from "../styles/Home/Pages/AboutUsPage.module.css"
 
 export default function AboutUsPage() {
@@ -29,7 +30,7 @@ export default function AboutUsPage() {
             dotTitle={"Team Members"}  title1={"App & Me 12기"}/>
             </div>
 
-            {/* <ProfileCard /> */}
+            <ProfileCard />
 
             <div className={styles.sectionBlock13}>
             <SectionBlock  marginBottom={"100px"}
@@ -38,6 +39,7 @@ export default function AboutUsPage() {
 
             <FaQ />
             <JoinUsNow />
+            <Footer/>
         </div>
     )
 }

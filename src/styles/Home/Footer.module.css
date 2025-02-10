@@ -1,0 +1,55 @@
+.footer {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    margin-top: 120px;
+}
+
+.footerContent {
+    border-top: 1px solid black;
+    padding: 130px;
+    display: flex;
+    gap: 200px;
+    align-items: flex-start;
+    width: 100%;
+    /* max-width: 1700px; yujin*/
+    /* padding으로 수정하기 */
+
+}
+
+.logoSection {
+    display: flex;
+    flex-direction: column;
+    gap: 400px;
+}
+
+.logoSection {
+    width: 120px;
+    height: 22px;
+}
+
+.pages,
+.social {
+    width: 49px;
+    height: 26px;
+    font-size: 18px;
+}
+
+li {
+    margin-top: 20px;
+    color: #aaaaaa;
+    font-size: 16px;
+}
+
+.web {
+    padding: 0 0 50px 130px;
+    color: #aaaaaa;
+    font-size: 16px;
+}
+
+@media (max-width: 800px) {
+    .footerContent {
+        flex-direction: column;
+    }
+}
