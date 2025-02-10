@@ -16,7 +16,8 @@ export default function Button({ width, height, cursor = "pointer", backColor = 
                     borderRadius: borderRadius,
                     display: "flex",
                     justifyContent: "center",
-                    alignItems: "center"
+                    alignItems: "center",
+                    fontWeight:"600"
                 }}>
                 {text}
             </div>
