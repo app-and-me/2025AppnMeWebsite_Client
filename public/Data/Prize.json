@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "src": "images/Prize/HighDreaming.jpg",
+        "name": "SK하이닉스 하인슈타인 데모데이",
+        "mainType": "데모데이",
+        "subType": "발표상",
+        "number": "9명"
+    },
+    {
+        "id": 2,
+        "src": "images/Prize/HighDreaming.jpg",
+        "name": "fdasfdsa",
+        "mainType": "데모데이",
+        "subType": "발표상",
+        "number": "9명"
+    },
+    {
+        "id": 3,
+        "src": "images/Prize/HighDreaming.jpg",
+        "name": "SK하이닉스 하인슈타인 데모데이",
+        "mainType": "데모데이",
+        "subType": "발표상",
+        "number": "9명"
+    },
+    {
+        "id": 4,
+        "src": "images/Prize/HighDreaming.jpg",
+        "name": "SK하이닉스 하인슈타인 데모데이",
+        "mainType": "데모데이",
+        "subType": "발표상",
+        "number": "9명"
+    }
+]
