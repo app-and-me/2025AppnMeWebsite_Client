@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom"
 import TitleCard from "../components/Common/TitleCard"
 import Button from "../components/Common/Button"
 import DotTitle from "../components/Common/DotTitle"
+import Footer from "../components/Common/Footer"
 import styles from "../styles/QnA/QnAPage.module.css"
 export default function QnAPage() {
     const navigate = useNavigate()
@@ -9,6 +10,7 @@ export default function QnAPage() {
         navigate('/QuestionForm')
     }
     return (
+        <div>
         <div className={styles["all-container"]}>
             <TitleCard
                 btnText={"14기"} btnWeight={"41px"} btnHeight={"28px"} borderRadius={"6px"} fontSize={"12px"}
@@ -29,6 +31,8 @@ export default function QnAPage() {
                 <DotTitle dotTitle={"Q&A"} />
                 <p className={styles["qna-title"]}>Q&A 게시판</p>
             </div>
+            </div>
+            <Footer/>
         </div>
     )
 }

@@ -1,6 +1,6 @@
 import TitleCard from "../components/Common/TitleCard"
 import Button from "../components/Common/Button"
-
+import Footer from "../components/Common/Footer"
 export default function QuestionForm() {
     return (
         <div>
@@ -12,6 +12,7 @@ export default function QuestionForm() {
             <div style={{ display: "flex", flexDirection: "column", alignItems: "center", margin: "38px 0 136px 0" }}>
                 <Button width={"156px"} height={"46px"} text={"Fill The Form Out!"} borderRadius={"10px"} />
             </div>
+            <Footer/>
         </div>
     )
 }
