@@ -5,3 +5,43 @@
 .sectionBlock13 {
     margin: 70px 0;
 }
+
+.profileContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    max-width: 1200px;
+    column-gap: 24px;
+    row-gap: 70px;
+    margin: auto;
+}
+
+.profile-img {
+    width: 100%;
+}
+
+@media (max-width: 1260px) {
+    .responsive {
+        padding: 0 50px;
+    }
+
+    .profileContainer {
+        grid-template-columns: repeat(2, 1fr);
+        flex-basis: content;
+        gap: 24px;
+        margin-top: -20px;
+    }
+
+
+}
+
+@media (max-width: 700px) {
+    .responsive {
+        padding: 0 30px;
+    }
+
+    .profileContainer {
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: -110px;
+    }
+}
