@@ -1,5 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import Footer from "../components/Common/Footer";
+import LanguageCard from "../components/Home/LanguageCard";
+
 import ScrollingImages from "../components/Home/MainTitle/FlowCard";
 import MainTitle from "../components/Home/MainTitle/MainTitle";
 import SectionBlock from "../components/Home/SectionBlock";
@@ -27,6 +29,14 @@ export default function HomePage() {
             <Bottom />
             <SectionBlock dotTitle={"Tools"} title1={"우리가 사용 / 배우는 툴"} subTitle1={"선배와 후배가 함께하는 스터디를 꾸준히 진행하여 부원들의"}
                 subTitle2={"실력 향상에 도움이 되고자 합니다. "} marginTop={"10px"} marginBottom={"40px"} />
+
+
+
+
+            <LanguageCard/>
+
+
+
 
             <MainActivity />
             <ActivityCardMain />
