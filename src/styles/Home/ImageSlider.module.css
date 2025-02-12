@@ -22,3 +22,9 @@
     height: 80px;
     object-fit: cover;
 }
+
+@media (max-width: 700px) {
+    .allContainer {
+        display: none;
+    }
+}
