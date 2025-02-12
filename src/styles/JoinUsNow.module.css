@@ -46,6 +46,11 @@
     .main {
         padding: 90px 50px;
     }
+
+    .introduction p:nth-child(2),
+    .introduction p:nth-child(3) {
+        font-size: 35px;
+    }
 }
 
 @media (max-width:600px) {
@@ -53,10 +58,6 @@
         padding: 80px 30px;
     }
 
-    .introduction p:nth-child(2),
-    .introduction p:nth-child(3) {
-        font-size: 35px;
-    }
 
     .introduction p:nth-child(3) {
         width: 100%;
