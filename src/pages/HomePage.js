@@ -7,9 +7,10 @@ import OurPrize from "../components/Prize/OurPrize";
 import JoinUsNow from "../components/Common/JoinUsNow";
 import FaQ from "../components/QnA/FaQ";
 import MainActivity from "../components/Home/Activity/MainActivity";
+import ActivityInfoCard from "../components/Home/Activity/ActivityInfoCard";
+import ActivityCardMain from "../components/Home/Activity/ActivityCardMain";
 import MainAboutAppNMe from "../components/Home/AboutAppNMe/MainAboutAppNMe"; 
-import styles from "../styles/Home/Pages/HomePage.module.css"
-import CardPrize from "../components/Home/OurPrize/CardPrize";
+import styles from "../styles/Home/Pages/HomePage.module.css" 
 export default function HomePage() {
     return (
         <div className={styles.allContainer}>
@@ -24,15 +25,15 @@ export default function HomePage() {
              subTitle2={"실력 향상에 도움이 되고자 합니다. "} marginTop={"10px"} marginBottom={"40px"}/>
               
             <MainActivity />
-            
+            <ActivityCardMain/>
+            {/* <ActivityInfoCard/> */}
         
             <SectionBlock dotTitle={"Photo"} title1={"앱앤미의 친목 사진"} 
              subTitle1={"선후배 간의 격식없이 다같이 친한 동아리로, 다양한 활동과 친목을 쌓을 수 있는 자리를 통해"} 
              subTitle2={"선배들과 이야기를 하며 친목을 다져 더욱 친밀하고 가까운 사이입니다."}
              marginTop={"10px"} marginBottom={"65px"}/>  
 
-            <OurPrize/>
-             {/* <CardPrize/> */}
+            <OurPrize/> 
 
             <SectionBlock dotTitle={"Testimonial"} title1={"12기 선배들에게"} title2={"앱앤미란?"} 
              marginTop={"75px"} marginBottom={"55px"}/>  
