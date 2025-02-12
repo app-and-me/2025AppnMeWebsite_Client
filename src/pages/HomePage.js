@@ -7,6 +7,7 @@ import MentorVoicesCard from "../components/Home/MentorVoicesCard";
 import OurPrize from "../components/Prize/OurPrize";
 import JoinUsNow from "../components/Common/JoinUsNow";
 import FaQ from "../components/QnA/FaQ";
+import Photo from "../components/Home/AboutAppNMe/Photo";
 import MainActivity from "../components/Home/Activity/MainActivity";
 import ActivityCardMain from "../components/Home/Activity/ActivityCardMain";
 import MainAboutAppNMe from "../components/Home/AboutAppNMe/MainAboutAppNMe";
@@ -31,9 +32,13 @@ export default function HomePage() {
             <ActivityCardMain />
 
             <SectionBlock dotTitle={"Photo"} title1={"앱앤미의 친목 사진"}
-                subTitle1={"선후배 간의 격식없이 다같이 친한 동아리로, 다양한 활동과 친목을 쌓을 수 있는 자리를 통해"}
+                subTitle1={"선후배 간의 격식없이 다같이 친한 동아리로, 다양한 활동을 통해"}
                 subTitle2={"선배들과 이야기를 하며 친목을 다져 더욱 친밀하고 가까운 사이입니다."}
                 marginTop={"10px"} marginBottom={"65px"} />
+            <div className={styles.PhotoContainer}>
+                <Photo start={"0%"} end={"-100%"} images={[1, 2, 3, 4]} />
+                <Photo start={"-100%"} end={"0%"} images={[5, 6, 7, 8]} />
+            </div>
 
             <OurPrize />
 
