@@ -1,0 +1,23 @@
+.all-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.qna-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 27px;
+}
+
+.qna-title {
+    font-size: 54px;
+}
+
+@media (max-width:850px) {
+    .qna-title {
+        font-size: 35px;
+    }
+}
