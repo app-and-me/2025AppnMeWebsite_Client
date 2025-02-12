@@ -1,36 +1,28 @@
-.ActivityCard-container {
-    flex-wrap: wrap;
-
-
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    flex: none;
-    flex-wrap: nowrap;
-    gap: 22px;
-}
-
 .cardContainer {
+    background: linear-gradient(0.07383128568086761deg,
+            var(--token-f5219c3a-5ee2-4639-9e23-4bdcf5509ebd,
+                rgba(0, 85, 255, 0.15)) 0%,
+            var(--token-b456af2e-fd88-41ae-8686-ad7692875dfd,
+                rgba(97, 97, 97, 0.09)) 100%);
     border-radius: 30px;
-    background-color: hotpink;
-    width: fit-content;
     padding: 20px 20px 40px;
+    width: 100%;
 }
 
-.cardContainer img:first-child {
-    width: 650px;
-}
-
-.cardContainer img:nth-child(2) {
-    width: 446px;
+.detail {
+    padding: 0 12px;
+    margin: 22px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
 }
 
 .img {
+    height: auto;
     border-radius: 20px;
 }
 
 .title-container {
-    margin-top: 22px;
-    margin: 22px 0 28px 0;
     display: flex;
     column-gap: 10px;
     font-size: 18px;
@@ -39,3 +31,11 @@
 .content-container {
     color: #FFFFFF80;
 }
+
+@media (max-width: 1200px) {
+    .firstImg {
+        height: 256px;
+    }
+}
+
+@media (max-width: 768px) {}
