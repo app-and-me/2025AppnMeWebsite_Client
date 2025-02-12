@@ -1,0 +1,52 @@
+.languageCardContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 20px;
+    justify-items: center;
+    align-items: center;
+    width: 1300px;
+    margin: 0 auto; 
+}
+
+.languageCardContainer div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.languageCardContainer img {
+    width: 100%;
+    max-width: 384px;
+    height: auto;
+    object-fit: contain;
+}
+
+@media (max-width: 1200px) {
+    .languageCardContainer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 810px) {
+    .languageCardContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .languageCardContainer {
+        width: 1000px;
+    }
+}
+
+@media (max-width: 390px) {
+    .languageCardContainer {
+        grid-template-columns: 1fr;
+    }
+
+    .languageCardContainer {
+        width: 260px;
+    }
+
+    .languageCardContainer img {
+        max-width: 100%;
+    }
+}

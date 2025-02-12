@@ -13,27 +13,28 @@
     gap: 200px;
     align-items: flex-start;
     width: 100%;
-    /* max-width: 1700px; yujin*/
-    /* padding으로 수정하기 */
-
+    max-width: 1700px;
 }
 
 .logoSection {
     display: flex;
     flex-direction: column;
-    gap: 400px;
-}
-
-.logoSection {
+    justify-content: flex-start;
+    gap: 30px;
     width: 120px;
     height: 22px;
 }
 
+.logoSection img {
+    width: 120px;
+    height: auto;
+}
+
 .pages,
 .social {
-    width: 49px;
-    height: 26px;
     font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 10px;
 }
 
 li {
@@ -43,15 +44,62 @@ li {
 }
 
 .web {
-    padding: 0 0 50px 130px;
+    padding: 50px 150px;
     color: #aaaaaa;
     font-size: 16px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
     .footerContent {
-        flex-direction: column;
+        gap: 145px;
+        padding: 70px;
+    }
+    .web {
+        padding: 60px;
     }
 }
 
-/* 주석 추가 */
+@media (max-width: 810px) {
+    .footerContent {
+        padding: 30px;
+    }
+
+    .logoSection img {
+        width: 100px;
+    }
+
+    li {
+        font-size: 14px;
+    }
+
+    .web {
+        padding: 50px;
+    }
+}
+
+@media (max-width: 390px) {
+    .footerContent {
+        padding: 30px;
+        gap: 30px;
+        flex-direction: column;
+    }
+
+    .logoSection img {
+        width: 80px;
+    }
+
+    .pages,
+    .social {
+        font-size: 16px;
+    }
+
+    li {
+        font-size: 12px;
+    }
+
+    .web {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
