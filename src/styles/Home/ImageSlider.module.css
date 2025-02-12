@@ -1,0 +1,24 @@
+.allContainer {
+    width: 400px;
+    height: 80px;
+    overflow: hidden;
+    margin-top: -50px;
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 30%, rgb(0, 0, 0) 70%, rgba(0, 0, 0, 0) 100%);
+    opacity: 1;
+}
+
+.line {
+    border: 1px solid #292929;
+}
+
+.slideContainer {
+    display: flex;
+    width: 200%;
+    gap: 40px;
+}
+
+.slideImg {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}

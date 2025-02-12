@@ -20,6 +20,11 @@
     width: calc(50% - 8px);
 }
 
+.sub {
+    display: flex;
+    gap: 24px;
+}
+
 .secondLine {
     display: flex;
     flex-direction: column;
