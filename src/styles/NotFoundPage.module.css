@@ -33,3 +33,19 @@
 .sub-title p:first-child {
     margin-bottom: 10px;
 }
+
+@media (max-width:1024px) {
+    .main-title p{
+        font-size: 40px;
+    }
+}
+
+@media (max-width:600px) {
+    .main-title p{
+        font-size: 30px;
+    }
+    .sub-title{
+        font-size: 12px;
+        padding: 0 20px;
+    }
+}

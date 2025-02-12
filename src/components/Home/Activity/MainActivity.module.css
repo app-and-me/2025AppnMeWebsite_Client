@@ -1,5 +1,12 @@
 .allContainer {
-    padding: 0 70px;
+    /* padding: 0 70px; */
+
+}
+
+.title-container {
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 600px;
 }
 
 .title-container>span {
@@ -8,7 +15,34 @@
 }
 
 .title-container>p {
+    line-height: 1.5;
     color: #FFFFFF99;
     margin-bottom: 10px;
     margin: 10px 0 10px 0;
+}
+
+@media (max-width:1024px) {
+    .title-container {
+        padding: 0 50px;
+    }
+}
+
+@media (max-width:800px) {
+    .title-container span {
+        font-size: 35px;
+    }
+}
+
+@media (max-width:600px) {
+    .title-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 30px;
+    }
+
+    .title-container span {
+        font-size: 35px;
+    }
 }

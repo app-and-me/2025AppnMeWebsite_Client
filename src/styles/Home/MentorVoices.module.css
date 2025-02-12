@@ -1,5 +1,20 @@
+.card {
+    display: flex;
+}
+
+.gridContainer {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 70px auto auto auto;
+}
+
 .all-container {
-    background: linear-gradient(0.07383128568086761deg, var(--token-f5219c3a-5ee2-4639-9e23-4bdcf5509ebd, rgba(0, 85, 255, 0.15)) 0%, var(--token-b456af2e-fd88-41ae-8686-ad7692875dfd, rgba(97, 97, 97, 0.09)) 100%);
+    background: linear-gradient(0.07383128568086761deg,
+            var(--token-f5219c3a-5ee2-4639-9e23-4bdcf5509ebd,
+                rgba(0, 85, 255, 0.15)) 0%,
+            var(--token-b456af2e-fd88-41ae-8686-ad7692875dfd,
+                rgba(97, 97, 97, 0.09)) 100%);
     border-radius: 20px;
     padding: 0 30px;
     opacity: 1;
@@ -19,7 +34,7 @@
 .message {
     margin-top: 20px;
     width: 100%;
-    max-width: 310px;
+    line-height: 1.5;
     color: #FFFFFF80;
 }
 
@@ -40,4 +55,33 @@
     width: 4.7px;
     height: 5px;
     background-color: white;
+}
+
+@media (max-width: 1200px) {
+    .gridContainer {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0 120px;
+    }
+
+    .all-container {
+        width: 100% !important;
+        max-width: none !important;
+    }
+}
+
+@media (max-width:700px) {
+    .allContainer {
+        padding: 0 50px;
+    }
+}
+
+@media (max-width: 600px) {
+    .gridContainer {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0 20px;
+    }
+
+    .all-container {
+        width: 100%;
+    }
 }

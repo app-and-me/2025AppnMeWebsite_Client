@@ -1,13 +1,18 @@
-.all-container {
+.main {
     width: 100%;
     max-width: 1000px;
+    margin: auto;
+}
+
+.all-container {
     height: 452px;
     background: linear-gradient(180deg, var(--token-f5219c3a-5ee2-4639-9e23-4bdcf5509ebd, rgba(255, 0, 174, 0.15)) 0%, rgb(8, 0, 5) 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin: auto;
+
+    border-radius: 20px;
 }
 
 .dot {
@@ -29,4 +34,32 @@
 .introduction p:nth-child(4) {
     font-size: 16px;
     color: #FFFFFF99;
+}
+
+@media (max-width:1200px) {
+    .main {
+        padding: 120px 50px;
+    }
+}
+
+@media (max-width:700px) {
+    .main {
+        padding: 90px 50px;
+    }
+}
+
+@media (max-width:600px) {
+    .main {
+        padding: 80px 30px;
+    }
+
+    .introduction p:nth-child(2),
+    .introduction p:nth-child(3) {
+        font-size: 35px;
+    }
+
+    .introduction p:nth-child(3) {
+        width: 100%;
+        max-width: 220px;
+    }
 }

@@ -8,7 +8,6 @@
 .all-container img {
     width: 100%;
     max-width: 409px;
-    height: 78px;
     margin: 34px 0 23px 0;
 }
 
@@ -16,6 +15,16 @@
     display: flex;
     align-items: center;
     column-gap: 12px;
+    width: fit-content;
+    padding: 6px 14px 6px 6px;
+    background-color: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(2.5px);
+    border-radius: 10px;
+    border: 1px solid var(--token-30ee69d1-cae6-4a5c-9af2-db5c94a12e77, rgba(255, 255, 255, 0.05));
+}
+
+.mainTitle {
+    font-size: 54px;
 }
 
 .subTitle {
@@ -30,4 +39,23 @@
 
 .subTitle p:last-child {
     margin: 5px 0 0 0;
+}
+
+@media (max-width:850) {
+    .mainTitle {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 600px) {
+    .mainTitle {
+        font-size: 35px;
+    }
+
+    .subTitle {}
+
+    .all-container img {
+        width: 100%;
+        max-width: 257px;
+    }
 }
