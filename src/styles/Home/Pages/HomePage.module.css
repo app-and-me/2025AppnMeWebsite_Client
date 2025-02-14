@@ -1,8 +1,47 @@
- .allContainer {}
+.styleContainer {
+    padding: 0 120px;
+}
 
- .PhotoContainer {
-     display: flex;
-     flex-direction: column;
-     gap: 50px;
-     margin: 70px 0 0 0;
- }
+.PhotoContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin: 70px 0 220px 0;
+}
+
+.mainWrapper {
+    padding: 0 120px;
+}
+
+.introduce {
+    margin: 180px 0 10px 0;
+}
+
+@media (max-width: 1200px) {
+    .styleContainer {
+        padding: 0 50px;
+    }
+
+    .mainWrapper {
+        padding: 0 50px;
+    }
+
+    .introduce {
+        margin-top: 70px;
+    }
+}
+
+
+@media (max-width: 700px) {
+    .styleContainer {
+        padding: 0 30px;
+    }
+
+    .mainWrapper {
+        padding: 0;
+    }
+
+    .introduce {
+        margin-top: 0;
+    }
+}

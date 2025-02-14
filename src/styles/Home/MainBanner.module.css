@@ -1,5 +1,4 @@
 .allContainer {
-    /*padding-left: 120px;*/
     position: relative;
     display: flex;
     align-items: center;
@@ -8,6 +7,7 @@
 }
 
 .MainTitleContainer {
+
     position: absolute;
     z-index: 1;
     color: white;
@@ -27,10 +27,17 @@
 }
 
 
-@media (max-width: 1024px) {}
+@media (max-width: 1200px) {
+    .MainTitleContainer {
+        padding-left: 0;
+    }
+}
 
 @media (max-width: 700px) {
     .MainTitleContainer {
-        margin: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }

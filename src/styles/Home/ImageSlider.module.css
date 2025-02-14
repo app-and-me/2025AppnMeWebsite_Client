@@ -23,6 +23,10 @@
     object-fit: cover;
 }
 
+@media (max-width: 1200px) {
+    .allContainer {}
+}
+
 @media (max-width: 700px) {
     .allContainer {
         display: none;
