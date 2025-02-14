@@ -1,0 +1,37 @@
+.styleContainer {
+    /* padding: 0 120px; */
+}
+
+.allContainer {
+    margin: 80px 0 140px 0;
+    width: 100%;
+    overflow: hidden;
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 17.5%, rgb(0, 0, 0) 82.5%, rgba(0, 0, 0, 0) 100%);
+}
+
+.slideContainer {
+    display: flex;
+    width: 100%;
+    gap: 15px;
+}
+
+.slideImg {
+    width: 473px;
+    height: 362px;
+    border-radius: 24px;
+}
+
+@media (max-width: 1200px) {
+    .slideImg {
+        width: 350px;
+        height: 290px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .slideImg {
+        width: 280px;
+        height: 226px;
+    }
+}

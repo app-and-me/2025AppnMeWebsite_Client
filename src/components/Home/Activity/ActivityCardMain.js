@@ -18,6 +18,7 @@ export default function ActivityCardMain() {
                     content={"앱앤미 동아리 부원들과 팀을 구성해 스마틴 앱 챌린지 공모전에 참여했습니다."}
                     src={"03.png"}
                     className={styles["secondImg"]}
+                    showButton={false}
                 />
                 <ActivityInfoCard
                     title={"SW 동행 챌린지 해커톤"}
@@ -35,6 +36,7 @@ export default function ActivityCardMain() {
                     content={"저희의 개발 작품을 전시하며 앱앤미로서 메이커 페어 서울에 참가하였고, 다양한 전시품들을 구경할 기회가 있었습니다."}
                     src={"02.jpg"}
                     className={styles["thirdImg"]}
+                    showButton={false}
                 />
 
                 <ActivityInfoCard

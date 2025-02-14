@@ -1,7 +1,7 @@
 import styles from "../../../components/Home/Activity/ActivityInfoCard.module.css"
 import Button from "../../Common/Button"
 
-export default function ActivityInfoCard({ title, content, src, className }) {
+export default function ActivityInfoCard({ title, content, src, className, showButton = true }) {
     return (
         <div>
             <div className={styles.cardContainer}>
@@ -9,7 +9,9 @@ export default function ActivityInfoCard({ title, content, src, className }) {
                 <div className={styles.detail}>
                     <div className={styles["title-container"]}>
                         {title}
-                        <Button text={"PRIZE"} borderRadius={"8px"} width={"49px"} height={"26px"} fontSize={"12px"} />
+                        {showButton && (
+                            <Button text={"PRIZE"} borderRadius={"8px"} width={"49px"} height={"26px"} fontSize={"12px"} />
+                        )}
                     </div>
                     <div className={styles["content-container"]}>{content}</div>
                 </div>

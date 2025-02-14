@@ -26,7 +26,7 @@ export default function MainTitle() {
             <div className={styles.MainTitleContainer}>
                 <div className={styles.infoTitle}>
                     <Button text={"NEW"} borderRadius={"6px"} width={"45px"} height={"28px"} fontSize={"12px"} />
-                    <span>2025 App & Me Website</span>
+                    <span style={{ whiteSpace: "nowrap" }}>2025 App & Me Website</span>
                 </div>
 
                 <ImgStyle><img src="/images/Logo/logo.png"></img></ImgStyle>

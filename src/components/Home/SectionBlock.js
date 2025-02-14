@@ -11,7 +11,6 @@ export default function SectionBlock({ dotTitle, title1, title2,
   subTitle1, subTitle2, marginTop, marginBottom }) {
   const MarginStyle = styled.div`
     margin-top: 30px;
-    white-space: nowrap;
     `
   const navigate = useNavigate();
   const handleClick = () => {

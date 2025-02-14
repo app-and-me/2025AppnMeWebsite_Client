@@ -8,7 +8,7 @@
 
 .footerContent {
     border-top: 1px solid black;
-    padding: 130px;
+    padding: 120px;
     display: flex;
     gap: 200px;
     align-items: flex-start;
@@ -52,32 +52,19 @@ li {
 @media (max-width: 1200px) {
     .footerContent {
         gap: 145px;
-        padding: 70px;
+        padding: 50px;
     }
+
     .web {
         padding: 60px;
     }
 }
 
-@media (max-width: 810px) {
-    .footerContent {
-        padding: 30px;
+@media (max-width: 700px) {
+    .footer {
+        margin: 0;
     }
 
-    .logoSection img {
-        width: 100px;
-    }
-
-    li {
-        font-size: 14px;
-    }
-
-    .web {
-        padding: 50px;
-    }
-}
-
-@media (max-width: 390px) {
     .footerContent {
         padding: 30px;
         gap: 30px;
