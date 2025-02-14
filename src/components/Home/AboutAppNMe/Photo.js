@@ -4,24 +4,35 @@ import { useEffect, useState } from "react"
 export default function Photo({ start, end, images }) {
 
     const [duration, setDuration] = useState(30);
+    const [resetKey, setResetKey] = useState(0);
     useEffect(() => {
-        const handleResize = () => {
-            if (window.innerWidth < 701) {
-                setDuration(10); // mobile
+        const updateDuration = () => {
+            const width = window.innerWidth;
+            let newDuration;
+
+            if (width < 768) {
+                newDuration = 10; //mobile
+            } else if (width < 1024) {
+                newDuration = 25;//pc
             } else {
-                setDuration(30); // PC 
+                newDuration = 30; //컴터
             }
+            setDuration(newDuration);//초기설정
+            setTimeout(() => {
+                setResetKey(prev => prev + 1);
+            }, 10);
         };
 
-        handleResize(); // 초기 설정
-        window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
+        updateDuration();
+        window.addEventListener("resize", updateDuration);
+        return () => window.removeEventListener("resize", updateDuration);
     }, []);
 
     return (
         <div>
             <div className={styles.allContainer}>
                 <motion.div
+                    key={resetKey}
                     className={styles.slideContainer}
                     animate={{ x: [start, end] }}
                     transition={{ repeat: Infinity, duration: duration, ease: "linear" }}
