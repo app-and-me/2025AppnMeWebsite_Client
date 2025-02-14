@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import Project from "../components/Home/AboutAppNMe/Project";
 import Footer from "../components/Common/Footer";
 import LanguageCard from "../components/Home/LanguageCard";
 
@@ -25,6 +26,7 @@ export default function HomePage() {
             <MainAboutAppNMe />
             <SectionBlock dotTitle={"Project"} title1={"App & Me"} title2={"프로젝트를 소개합니다!"}
                 subTitle1={"12기, 13기 앱앤미 부원들의 프로젝트들을 소개합니다!"} marginTop={"30px"} marginBottom={"30px"} />
+            <Project />
 
             <Bottom />
             <SectionBlock dotTitle={"Tools"} title1={"우리가 사용 / 배우는 툴"} subTitle1={"선배와 후배가 함께하는 스터디를 꾸준히 진행하여 부원들의"}
@@ -33,7 +35,7 @@ export default function HomePage() {
 
 
 
-            <LanguageCard/>
+            <LanguageCard />
 
 
 
