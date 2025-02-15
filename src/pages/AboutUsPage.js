@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import TitleCard from "../components/Common/TitleCard";
 import Banner from "../components/Home/MainTitle/Banner";
 import SectionBlock from "../components/Home/SectionBlock"
@@ -6,13 +7,39 @@ import FaQ from "../components/QnA/FaQ";
 import Bottom from "../components/Common/Bottom";
 import JoinUsNow from "../components/Common/JoinUsNow";
 import Footer from "../components/Common/Footer";
+import TransparentBottom from "../components/Common/TransparentBottom";
 import styles from "../styles/Home/Pages/AboutUsPage.module.css"
 
 export default function AboutUsPage() {
+    const [isFooterVisible, setIsFooterVisible] = useState(true);
+    const navigate = useNavigate();
+
+
+    const checkScrollPosition = () => {
+        const scrollY = window.scrollY;
+        const documentHeight = document.documentElement.scrollHeight;
+        const windowHeight = window.innerHeight;
+
+
+        if (scrollY + windowHeight >= documentHeight - 10) {
+            setIsFooterVisible(false);  // 숨기기
+        } else {
+            setIsFooterVisible(true);
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener("scroll", checkScrollPosition);
+        return () => {
+            window.removeEventListener("scroll", checkScrollPosition);
+        };
+    }, []);
+
     const Member12 = ["추다율", "윤주영", "배주연", "황유진", "하지민", "송유빈"]
     const Member13 = ["지수민", "이효은", "유성윤", "강재호", "이서현", "송지아"]
     return (
         <div>
+            {isFooterVisible && <TransparentBottom />}
             <div style={{ position: "relative", display: "flex", height: "506px", overflow: "hidden" }}>
                 <Banner />
 

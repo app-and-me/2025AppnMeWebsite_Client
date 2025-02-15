@@ -12,7 +12,7 @@ export default function QuestionForm() {
             <div style={{ display: "flex", flexDirection: "column", alignItems: "center", margin: "38px 0 136px 0" }}>
                 <Button width={"156px"} height={"46px"} text={"Fill The Form Out!"} borderRadius={"10px"} />
             </div>
-            <Footer/>
+            <Footer />
         </div>
     )
 }

@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 import Project from "../components/Home/AboutAppNMe/Project";
 import Footer from "../components/Common/Footer";
 import LanguageCard from "../components/Home/LanguageCard";
@@ -14,11 +15,35 @@ import MainActivity from "../components/Home/Activity/MainActivity";
 import ActivityCardMain from "../components/Home/Activity/ActivityCardMain";
 import MainAboutAppNMe from "../components/Home/AboutAppNMe/MainAboutAppNMe";
 import Bottom from "../components/Common/Bottom";
+import TransparentBottom from "../components/Common/TransparentBottom";
 import styles from "../styles/Home/Pages/HomePage.module.css"
 export default function HomePage() {
+    const [isFooterVisible, setIsFooterVisible] = useState(true);
+    const navigate = useNavigate();
+
+
+    const checkScrollPosition = () => {
+        const scrollY = window.scrollY;
+        const documentHeight = document.documentElement.scrollHeight;
+        const windowHeight = window.innerHeight;
+
+
+        if (scrollY + windowHeight >= documentHeight - 10) {
+            setIsFooterVisible(false);  // 숨기기
+        } else {
+            setIsFooterVisible(true);
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener("scroll", checkScrollPosition);
+        return () => {
+            window.removeEventListener("scroll", checkScrollPosition);
+        };
+    }, []);
     return (
         <div className={styles.allContainer}>
-
+            {isFooterVisible && <TransparentBottom />}
             <div className={styles.mainWrapper}>
                 <MainTitle />
                 <ScrollingImages />
