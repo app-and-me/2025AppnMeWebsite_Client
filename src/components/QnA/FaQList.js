@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import styles from "../../styles/QnA/FaQList.module.css";
 
 const FaQData = [
@@ -31,17 +31,20 @@ const FaQData = [
 
 export default function FaQList() {
     const [openFaq, setOpenFaq] = useState([]);
+    const contentRefs = useRef({});
 
     const toggleItem = (id) => {
         setOpenFaq((prev) =>
             prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
         );
     };
-
     return (
         <div className={styles["all-container"]}>
             {FaQData.map((item) => (
-                <div key={item.id} className={`${styles["qnaList-container"]} ${openFaq.includes(item.id) ? styles["open"] : ""}`}>
+                <div
+                    key={item.id}
+                    className={`${styles["qnaList-container"]} ${openFaq.includes(item.id) ? styles["open"] : ""}`}
+                >
                     <div onClick={() => toggleItem(item.id)}>
                         <div className={styles["title-container"]}>
                             <span>{item.title}</span>
@@ -49,13 +52,19 @@ export default function FaQList() {
                         </div>
                     </div>
 
-                    {openFaq.includes(item.id) && (
-                        <div className={styles["faq-content"]}>
-                            {item.content.split("\n").map((line, index) => (
-                                <p key={index}>{line}</p>
-                            ))}
-                        </div>
-                    )}
+                    <div
+                        ref={(el) => (contentRefs.current[item.id] = el)}
+                        className={styles["faq-content"]}
+                        style={{
+                            height: openFaq.includes(item.id) ? `${contentRefs.current[item.id]?.scrollHeight}px` : "0px",
+                            opacity: openFaq.includes(item.id) ? "1" : "0",
+                            transition: "height 0.4s ease-out, opacity 0.4s ease-out",
+                        }}
+                    >
+                        {item.content.split("\n").map((line, index) => (
+                            <p key={index}>{line}</p>
+                        ))}
+                    </div>
                 </div>
             ))}
         </div>

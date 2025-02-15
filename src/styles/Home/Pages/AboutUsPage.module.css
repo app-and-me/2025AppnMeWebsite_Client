@@ -31,17 +31,30 @@
         gap: 24px;
         margin-top: -20px;
     }
+}
 
+@media (max-width:1024px) {
 
+    .responsive {
+        padding: 0 50px !important;
+    }
 }
 
 @media (max-width: 700px) {
     .responsive {
-        padding: 0 30px;
+        /* padding: 0 30px; */
     }
 
     .profileContainer {
         grid-template-columns: repeat(1, 1fr);
         margin-top: -110px;
+        max-width: 400px;
     }
+}
+
+@media (max-width: 600px) {
+    .responsive {
+        padding: 0 30px;
+    }
+
 }

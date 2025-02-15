@@ -18,6 +18,7 @@
 .history-container {
     overflow: scroll;
     max-height: 1500px;
+    scrollbar-width: none;
 }
 
 
