@@ -4,6 +4,7 @@ import Button from "../components/Common/Button"
 import DotTitle from "../components/Common/DotTitle"
 import Bottom from "../components/Common/Bottom"
 import Footer from "../components/Common/Footer"
+import FaQList from "../components/QnA/FaQList"
 import styles from "../styles/QnA/QnAPage.module.css"
 export default function QnAPage() {
     const navigate = useNavigate()
@@ -31,9 +32,13 @@ export default function QnAPage() {
                 <div className={styles["qna-container"]}>
                     <DotTitle dotTitle={"Q&A"} />
                     <p className={styles["qna-title"]}>Q&A 게시판</p>
+                    <p style={{ color: "#FFFFFF99" }}>여기서 동아리 관련 질문들을 확인하실 수 있습니다!</p>
                 </div>
             </div>
 
+            <div className={styles["qnaList-container"]}>
+                <FaQList addClass={styles["faq-all-container"]} />
+            </div>
             <Bottom />
             <Footer />
         </div>
