@@ -7,7 +7,6 @@ export default function Footer() {
             <div className={styles.footerContent}>
                 <div className={styles.logoSection}>
                     <img src="/images/Logo/logo.png"></img>
-                    {/* <div className={styles.web}>2025 App & Me Website</div> */}
                 </div>
 
                 <div className={styles.pagesSection}>
@@ -23,21 +22,18 @@ export default function Footer() {
 
                 <div className={styles.socialSection}>
                     <div className={styles.social}>Social</div>
+
                     <ul>
                         <li>
                             <a href="https://www.instagram.com/app_and_me?igsh=a25jNHFzMmF6cHJi">
                                 Instagram
-                                </a>
-                            </li>
+                            </a>
+                        </li>
                     </ul>
+
                 </div>
             </div>
-             
             <div className={styles.web}>2025 App & Me Website</div>
-          
-            {/* <div className={styles.footerBottom}>
-                <div className={styles.web}>2025 App & Me Website</div>
-            </div> */}
         </footer>
     );
 }

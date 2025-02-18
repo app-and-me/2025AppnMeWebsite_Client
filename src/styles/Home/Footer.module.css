@@ -39,8 +39,11 @@
 
 li {
     margin-top: 20px;
-    color: #aaaaaa;
     font-size: 16px;
+}
+
+li a {
+    color: #aaaaaa;
 }
 
 .web {

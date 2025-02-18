@@ -29,7 +29,7 @@ const FaQData = [
     }
 ];
 
-export default function FaQList() {
+export default function FaQList({ addClass }) {
     const [openFaq, setOpenFaq] = useState([]);
     const contentRefs = useRef({});
 
@@ -39,34 +39,36 @@ export default function FaQList() {
         );
     };
     return (
-        <div className={styles["all-container"]}>
-            {FaQData.map((item) => (
-                <div
-                    key={item.id}
-                    className={`${styles["qnaList-container"]} ${openFaq.includes(item.id) ? styles["open"] : ""}`}
-                >
-                    <div onClick={() => toggleItem(item.id)}>
-                        <div className={styles["title-container"]}>
-                            <span>{item.title}</span>
-                            <span className={styles["toggle-icon"]}>{openFaq.includes(item.id) ? '×' : '+'}</span>
+        <div className={`$styles["all-container"]} ${addClass}`} >
+            {
+                FaQData.map((item) => (
+                    <div
+                        key={item.id}
+                        className={`${styles["qnaList-container"]} ${openFaq.includes(item.id) ? styles["open"] : ""}`}
+                    >
+                        <div onClick={() => toggleItem(item.id)}>
+                            <div className={styles["title-container"]}>
+                                <span>{item.title}</span>
+                                <span className={styles["toggle-icon"]}>{openFaq.includes(item.id) ? '×' : '+'}</span>
+                            </div>
+                        </div>
+
+                        <div
+                            ref={(el) => (contentRefs.current[item.id] = el)}
+                            className={styles["faq-content"]}
+                            style={{
+                                height: openFaq.includes(item.id) ? `${contentRefs.current[item.id]?.scrollHeight}px` : "0px",
+                                opacity: openFaq.includes(item.id) ? "1" : "0",
+                                transition: "height 0.4s ease-out, opacity 0.4s ease-out",
+                            }}
+                        >
+                            {item.content.split("\n").map((line, index) => (
+                                <p key={index}>{line}</p>
+                            ))}
                         </div>
                     </div>
-
-                    <div
-                        ref={(el) => (contentRefs.current[item.id] = el)}
-                        className={styles["faq-content"]}
-                        style={{
-                            height: openFaq.includes(item.id) ? `${contentRefs.current[item.id]?.scrollHeight}px` : "0px",
-                            opacity: openFaq.includes(item.id) ? "1" : "0",
-                            transition: "height 0.4s ease-out, opacity 0.4s ease-out",
-                        }}
-                    >
-                        {item.content.split("\n").map((line, index) => (
-                            <p key={index}>{line}</p>
-                        ))}
-                    </div>
-                </div>
-            ))}
-        </div>
+                ))
+            }
+        </ div >
     );
 }

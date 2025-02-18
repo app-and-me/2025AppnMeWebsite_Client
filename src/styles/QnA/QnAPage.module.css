@@ -16,8 +16,30 @@
     font-size: 54px;
 }
 
+.qnaList-container {
+    margin: 100px 0;
+}
+
+.faq-all-container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 70%;
+}
+
 @media (max-width:850px) {
     .qna-title {
         font-size: 35px;
+    }
+}
+
+@media (max-width:700px) {
+    .qna-container {
+        margin: 50px 0;
+    }
+
+    .faq-all-container {
+        max-width: none;
+        padding: 0 30px;
     }
 }

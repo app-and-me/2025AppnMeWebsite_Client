@@ -1,5 +1,5 @@
-import styles from "../../styles/JoinUs/JoinForm.module.css"
-import { useState } from "react"
+import { useState } from "react";
+import styles from "../../styles/JoinUs/JoinForm.module.css";
 
 export default function JoinForm() {
     const [formData, setFormData] = useState({
@@ -11,18 +11,32 @@ export default function JoinForm() {
         dormitory: "통학생",
         fiveWords: "",
         motivation: "",
-    })
+    });
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value, })
-    }
+
+        const MAX_LENGTH = {
+            studentId: 4,
+            fiveWords: 5,
+            motivation: 300,
+        }
+
+        if (
+            (name === "studentId" && value.length <= MAX_LENGTH.studentId) ||
+            (name === "fiveWords" && value.length <= MAX_LENGTH.fiveWords) ||
+            (name === "motivation" && value.length <= MAX_LENGTH.motivation) ||
+            (name !== "studentId" && name !== "fiveWords" && name !== "motivation")
+        ) {
+            setFormData({ ...formData, [name]: value });
+        }
+    };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("제출된 데이터", formData)
-        alert("백엔드 api 연결 후 실제 제출!!!")
-    }
+        console.log("제출된 데이터", formData);
+        alert("신청이 완료 되었습니다!");
+    };
 
     return (
         <div>
@@ -48,6 +62,7 @@ export default function JoinForm() {
                             value={formData.studentId}
                             onChange={handleChange}
                             placeholder="1101"
+                            maxLength={4}
                             required
                         />
                     </div>
@@ -89,6 +104,7 @@ export default function JoinForm() {
                         </select>
                     </div>
                 </div>
+
                 <label>기숙사 여부*</label>
                 <select
                     name="dormitory"
@@ -120,10 +136,12 @@ export default function JoinForm() {
                     placeholder="지원동기를 작성해주세요(최대 300자)"
                     required
                 />
-                <div style={{ margin: "10px 0", fontSize: "14px" }}>{formData.motivation.length}/300</div>
+                <div style={{ margin: "10px 0", fontSize: "14px" }}>
+                    {formData.motivation.length}/300
+                </div>
 
                 <button type="submit" className={styles.submitButton}>제출하기</button>
             </form>
         </div>
-    )
+    );
 }
