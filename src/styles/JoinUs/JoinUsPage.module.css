@@ -2,14 +2,25 @@
     padding: 0 120px;
 }
 
+@media (max-width: 1300px) {
+
+    .questionForm {
+        padding: 0 50px;
+    }
+}
+
 @media (max-width: 1200px) {
-    .allContainer {
+
+    .allContainer,
+    .questionForm {
         padding: 0 50px;
     }
 }
 
 @media (max-width: 700px) {
-    .allContainer {
+
+    .allContainer,
+    .questionForm {
         padding: 0 30px;
     }
 }
