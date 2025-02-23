@@ -2,6 +2,7 @@ import TitleCard from "../components/Common/TitleCard";
 import Banner from "../components/Home/MainTitle/Banner";
 import FaQ from "../components/QnA/FaQ";
 import JoinUsNow from "../components/Common/JoinUsNow";
+import Bottom from "../components/Common/Bottom";
 import Footer from "../components/Common/Footer";
 
 export default function PrizePage() {
@@ -20,7 +21,7 @@ export default function PrizePage() {
                     />
                 </div>
             </div>
-
+            <Bottom />
             <FaQ />
             <JoinUsNow />
             <Footer />

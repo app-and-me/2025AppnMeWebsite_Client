@@ -22,7 +22,7 @@ export default function QForm() {
     return (
         <div>
             <form onSubmit={handleSubmit} className={styles2.questionForm}>
-                <div className={styles.width}>
+                {/* <div className={styles.width}>
                     <label>제목*</label>
                     <input
                         type="text"
@@ -32,7 +32,7 @@ export default function QForm() {
                         onChange={handleChange}
                         required
                     />
-                </div>
+                </div> */}
 
                 <div className={styles.width}>
                     <label>질문 내용*</label>
