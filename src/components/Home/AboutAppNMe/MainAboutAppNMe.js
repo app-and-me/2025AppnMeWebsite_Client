@@ -8,6 +8,7 @@ export default function MainAboutAppNMe() {
     const navigate = useNavigate()
     const handleClick = () => {
         navigate("/JoinUs")
+        window.scrollTo({ top: 0, behavior: "smooth" })
     }
     return (
         <div className={styles.Container}>

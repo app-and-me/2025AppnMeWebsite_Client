@@ -3,9 +3,13 @@ import Button from "../Common/Button";
 import styles from "../../styles/QnA/FaQTitle.module.css"
 import { useNavigate } from "react-router-dom";
 export default function FaQTitle() {
+    const MoveToTop = () => {
+        window.scrollTo({ top: 0, behavior: "smooth" })
+    }
     const navigate = useNavigate();
     const handleClick = () => {
         navigate("/QuestionForm")
+        MoveToTop()
     }
     return (
         <div className={styles.allContainer}>

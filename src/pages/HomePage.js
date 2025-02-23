@@ -53,7 +53,7 @@ export default function HomePage() {
                 title2={"APP & ME를 소개합니다!"} marginBottom={"60px"} /></div>
             <Bottom />
 
-            <div style={{ margin: "100px 0" }}><MainAboutAppNMe /></div>
+            <div style={{ margin: "7vh 0 18vh 0" }}><MainAboutAppNMe /></div>
             <SectionBlock dotTitle={"Project"} title1={"App & Me"} title2={"프로젝트를 소개합니다!"}
                 subTitle1={"12기, 13기 앱앤미 부원들의 프로젝트들을 소개합니다!"} marginTop={"30px"} marginBottom={"30px"} />
             <div className={styles.styleContainer}><Project /></div>
@@ -75,8 +75,8 @@ export default function HomePage() {
             </div>
 
             <SectionBlock dotTitle={"Photo"} title1={"앱앤미의 친목 사진"}
-                subTitle1={"선후배 간의 격식없이 다같이 친한 동아리로, 다양한 활동을 통해"}
-                subTitle2={"선배들과 이야기를 하며 친목을 다져 더욱 친밀하고 가까운 사이입니다."}
+                subTitle1={"선후배 간의 격식없이 다같이 친한 동아리로, 다양한 활동을 통해 선배들과 이야기를 하며 친목을 다져 더욱 친밀하고 가까운 사이입니다."}
+
                 marginTop={"10px"} marginBottom={"65px"} />
             <div className={styles.styleContainer}>
                 <div className={styles.PhotoContainer}>
