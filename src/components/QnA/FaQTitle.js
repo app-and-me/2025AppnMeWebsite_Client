@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 export default function FaQTitle() {
     const navigate = useNavigate();
     const handleClick = () => {
-        navigate("/QnA")
+        navigate("/QuestionForm")
     }
     return (
         <div className={styles.allContainer}>
