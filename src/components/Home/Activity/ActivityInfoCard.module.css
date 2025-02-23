@@ -30,6 +30,7 @@
 
 .content-container {
     color: #FFFFFF80;
+    line-height: 26px;
 }
 
 @media (max-width: 1200px) {

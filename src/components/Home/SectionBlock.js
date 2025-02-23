@@ -17,6 +17,7 @@ export default function SectionBlock({ dotTitle, title1, title2, subTitle1, subT
   const navigate = useNavigate();
   const handleClick = () => {
     navigate("/AboutUs");
+    window.scrollTo({ top: 0, behavior: "smooth" })
   };
 
   // 스크롤

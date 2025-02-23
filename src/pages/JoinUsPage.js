@@ -28,7 +28,7 @@ export default function JoinUSPage() {
                     mainTitle={"새로운 부원을 모집합니다!"}
                     subTitle1={"App & Me 14기에 도전하세요!"}
                 />
-                <div style={{ display: "flex", justifyContent: "center", margin: "38px 0 176px 0" }}>
+                <div style={{ display: "flex", justifyContent: "center", margin: "3vw 0 15vw" }}>
                     <Button
                         text={"Fill The Form Out!"}
                         width={"156px"}

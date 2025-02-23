@@ -1,7 +1,7 @@
 .all-container {
     display: flex;
     justify-content: center;
-    gap: 84px;
+    gap: 6vw;
     margin: 208px 0 201px 0;
 }
 
