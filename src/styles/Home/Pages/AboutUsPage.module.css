@@ -20,6 +20,11 @@
     width: 100%;
 }
 
+.profile-img:hover {
+    transform: scale(1.04);
+    transition-duration: 2.5s;
+}
+
 @media (max-width: 1260px) {
     .responsive {
         padding: 0 50px;
