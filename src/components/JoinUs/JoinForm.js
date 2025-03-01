@@ -8,6 +8,7 @@ export default function JoinForm() {
         phone: "",
         gender: "",
         department: "소프트웨어과",
+        birthday: "",
         dormitory: "통학생",
         fiveWords: "",
         motivation: "",
@@ -70,7 +71,7 @@ export default function JoinForm() {
 
                 <label>전화번호*</label>
                 <input
-                    type="tel"
+                    type="text"
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
@@ -102,6 +103,19 @@ export default function JoinForm() {
                             <option value="소프트웨어과">소프트웨어과</option>
                             <option value="디자인과">디자인과</option>
                         </select>
+                    </div>
+
+
+                    <div className={styles.width}>
+                        <label>생년월일*</label>
+                        <input
+                            type="text"
+                            name="birthday"
+                            value={formData.birthday}
+                            onChange={handleChange}
+                            placeholder="090101"
+                            required
+                        />
                     </div>
                 </div>
 
