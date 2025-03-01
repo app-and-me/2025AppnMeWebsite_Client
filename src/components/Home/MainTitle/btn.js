@@ -17,24 +17,29 @@ export default function Btn({ onClick, width, backColor, fontColor }) {
         align-items: center;
         margin: 38px 0 50px 0;
         cursor: pointer;
+        transition: opacity 1s ease;
+
+        &:hover {
+            opacity: ${(props) => (props.isInstagram ? 0.6 : 1)};
+        }
     `;
 
     const ButtonContainer = styled.div`
         display: flex;
         column-gap: 12px;
+        transition : opacity 1s ease;
 
-        // @media (max-width: 768px) { 
-        //     flex-direction: column;
-               
-        //     align-items: center;  
-        // }
+        &:hover {
+            opacity: ${(props) => (props.isInstagram ? 0.6 : 1)};
+        }
     `;
 
     return (
         <ButtonContainer>
-            <ApplyBtn onClick={onClick}>지원하기</ApplyBtn>
-            <ApplyBtn 
-                onClick={InstagramClick} 
+            <ApplyBtn onClick={onClick} isInstagram={true}>지원하기</ApplyBtn>
+            <ApplyBtn
+                onClick={InstagramClick}
+                isInstagram={true}
                 style={{ width: width, backgroundColor: backColor, color: fontColor }}
             >
                 앱앤미 인스타 보기

@@ -3,8 +3,8 @@ import styles2 from "../../styles/JoinUs/JoinUsPage.module.css"
 import { useState } from "react"
 export default function QForm() {
     const [formData, setFormData] = useState({
-        title: "",
         content: "",
+        password: "",
     })
 
     const handleChange = (e) => {
@@ -22,30 +22,29 @@ export default function QForm() {
     return (
         <div>
             <form onSubmit={handleSubmit} className={styles2.questionForm}>
-                {/* <div className={styles.width}>
-                    <label>제목*</label>
-                    <input
-                        type="text"
-                        name="title"
-                        value={formData.title}
-                        placeholder="제목을 작성해주세요."
-                        onChange={handleChange}
-                        required
-                    />
-                </div> */}
-
+                <label>질문 내용*</label>
+                <textarea
+                    type="text"
+                    name="content"
+                    value={formData.content}
+                    placeholder="질문을 작성해주세요."
+                    onChange={handleChange}
+                    className={styles.questionBox}
+                    required
+                />
                 <div className={styles.width}>
-                    <label>질문 내용*</label>
+                    <label className={styles.pwLabel}>비밀번호 (질문 수정을 위한 용도입니다)*</label>
                     <input
-                        type="text"
-                        name="content"
-                        value={formData.content}
-                        placeholder="질문을 작성해주세요."
+                        type="password"
+                        name="password"
+                        value={formData.password}
+                        placeholder="비밀번호를 작성해주세요."
                         onChange={handleChange}
+                        className={styles.passwordBox}
                         required
                     />
                 </div>
-                <button type="submit" className={styles.submitButton}>제출하기</button>
+                <button type="submit" className={styles.submitButton}>질문하기</button>
             </form>
         </div>
     )
