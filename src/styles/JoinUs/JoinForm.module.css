@@ -83,11 +83,7 @@ textarea::placeholder {
     transition: all 0.8s ease-out;
 }
 
-@media (max-width: 1200px) {
-    textarea {
-        height: 180px;
-    }
-}
+@media (max-width: 1200px) {}
 
 @media (max-width: 700px) {
     form {
@@ -109,6 +105,6 @@ textarea::placeholder {
     }
 
     textarea {
-        height: 250px;
+        height: 118px;
     }
 }
