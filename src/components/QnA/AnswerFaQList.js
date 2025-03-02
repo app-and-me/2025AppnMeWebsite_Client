@@ -42,7 +42,7 @@ export default function FaQList({ addClass }) {
                         </div>
 
                         <span className={styles.questionTitle} onClick={() => toggleItem(1)}>
-                            앱앤미는 무슨 활동을 하나요?
+                            질문 내용을 가져옴
                         </span>
                         <span className={styles["toggle-icon"]} onClick={() => toggleItem(1)}>
                             {openFaq.includes(1) ? "×" : "+"}

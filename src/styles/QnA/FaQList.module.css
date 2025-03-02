@@ -64,9 +64,13 @@
 }
 
 .questionTitle {
-    position: absolute;
-    margin-left: 50px;
+    display: block;
+    margin: 0 24px;
+    word-wrap: break-word;
+    white-space: normal;
+    width: 100%;
 }
+
 
 @media (max-width:1200px) {
     .all-container {
@@ -77,7 +81,7 @@
 
 @media (max-width:700px) {
     .title-container {
-        gap: 20px;
+        gap: 15px;
     }
 
     .all-container,
@@ -88,6 +92,10 @@
 
     .questionTitle {
         position: static;
-        margin-left: 0;
+        margin: 0;
+    }
+
+    .qnaList-container {
+        padding: 25px;
     }
 }
