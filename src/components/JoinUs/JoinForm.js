@@ -7,7 +7,7 @@ export default function JoinForm() {
         name: "",
         student_number: "",
         phone_number: "",
-        gender: "남성",
+        gender: "여",
         major: "소프트웨어과",
         birth_date: "",
         lived_dormitory: "통학생",
@@ -15,8 +15,28 @@ export default function JoinForm() {
         motivate: "",
     });
 
+    const [errors, setErrors] = useState({
+        birth_date: "",
+        five_letters: "",
+    })
+
     const handleChange = (e) => {
         const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value })
+
+        if (name === "birth_data") {
+            if (!/^\d{6}$/.test(value)) {
+                setErrors({ ...errors, birth_date: "생년월일은 YYMMDD 형식으로 입력해주세요. 예: 090101" })
+            } else {
+                setErrors({ ...errors, birth_date: "" })
+            }
+        }
+
+        if (name === "five_letters") {
+            if (value.length < 5) {
+                setErrors({ ...errors, five_letters: "다섯 글자로 입력해주세요." })
+            } else { setErrors({ ...errors, five_letters: "" }) }
+        }
 
         if (name === "phone_number") {
             if (!value.includes('-')) {
@@ -45,6 +65,16 @@ export default function JoinForm() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        if (!/^\d{6}$/.test(formData.birth_date)) {
+            setErrors({ ...errors, birth_date: "생년월일은 YYMMDD 형식으로 입력해주세요. 예: 090101" });
+            return;
+        }
+
+        if (formData.five_letters.length < 5) {
+            setErrors({ ...errors, five_letters: "다섯 글자로 입력해주세요." });
+            return;
+        }
         console.log("작성된 form data보기 : ", formData)
 
         try {
@@ -56,6 +86,13 @@ export default function JoinForm() {
             console.log("서버 응답", response.data);
             alert("신청이 완료 되었습니다!");
 
+            setFormData({
+                name: "", student_number: "", phone_number: "",
+                gender: "여", major: "소프트웨어과", birth_date: "",
+                lived_dormitory: "통학생", five_letters: "", motivate: "",
+            })
+
+            setErrors({ birth_date: "", five_letters: "" })
         } catch (error) {
             console.error("에러 발생", error)
             alert("서버와 연결에 문제가 발생함")
@@ -112,8 +149,8 @@ export default function JoinForm() {
                             onChange={handleChange}
                             required
                         >
-                            <option value="남성">남성</option>
                             <option value="여성">여성</option>
+                            <option value="남성">남성</option>
                         </select>
                     </div>
                     <div className={styles.width}>
@@ -140,6 +177,7 @@ export default function JoinForm() {
                             placeholder="090101"
                             required
                         />
+                        {errors.birth_date && <div style={{ color: "red" }}>{errors.birth_date}</div>}
                     </div>
                 </div>
 
@@ -164,6 +202,7 @@ export default function JoinForm() {
                     placeholder="ex) 완전열정적"
                     required
                 />
+                {errors.five_letters && <div style={{ color: "red" }}>{errors.five_letters}</div>}
 
                 <label>지원동기*</label>
                 <textarea
