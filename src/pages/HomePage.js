@@ -93,7 +93,7 @@ export default function HomePage() {
             <SectionBlock dotTitle={"Testimonial"} title1={"12기 선배들에게"} title2={"앱앤미란?"}
                 marginTop={"75px"} marginBottom={"55px"} />
             <MentorVoicesCard />
-            <Bottom />
+            <Bottom margin={"100px 0 0 0"} />
             <div className={styles.styleContainer}>
                 <FaQ />
             </div>

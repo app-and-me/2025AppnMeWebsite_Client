@@ -3,6 +3,7 @@ import Btn from "./btn";
 import Button from "../../Common/Button";
 import Banner from "./Banner";
 import styled from "styled-components";
+
 import styles from "../../../styles/Home/MainBanner.module.css"
 
 export default function MainTitle() {
@@ -31,7 +32,7 @@ export default function MainTitle() {
 
                 <ImgStyle><img src="/images/Logo/logo.png"></img></ImgStyle>
 
-                <div>
+                <div className={styles.maintitle}>
                     <p style={{ color: "#FFFFFF99", marginBottom: "5px" }}>앱앤미는 차세대 개발 흐름에 따른 기술들을 익히고 연구하며</p>
                     <p style={{ color: "#FFFFFF99" }}>실제로 서비스를 구현해서 학교 및 사회에 기여하는 전공 동아리입니다.</p>
                 </div>

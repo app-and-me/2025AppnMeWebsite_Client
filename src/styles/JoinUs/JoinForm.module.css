@@ -107,4 +107,8 @@ textarea::placeholder {
     textarea {
         height: 118px;
     }
+
+    .submitButton {
+        height: 45px;
+    }
 }

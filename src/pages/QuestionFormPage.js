@@ -19,11 +19,13 @@ export default function QuestionForm() {
     return (
         <div>
             <Header />
-            <TitleCard
-                btnHeight={"28px"} btnWeight={"46px"} borderRadius={"6px"} fontSize={"12px"} btnText={"2025"}
-                mainTitle={"질문 폼 입니다!"}
-                subTitle1={"자유롭게 질문해주세요!"}
-            />
+            <div style={{ marginTop: "130px" }}>
+                <TitleCard
+                    btnHeight={"28px"} btnWeight={"46px"} borderRadius={"6px"} fontSize={"12px"} btnText={"2025"}
+                    mainTitle={"질문 폼 입니다!"}
+                    subTitle1={"자유롭게 질문해주세요!"}
+                /></div>
+
             <div style={{ display: "flex", flexDirection: "column", alignItems: "center", margin: "38px 0 136px 0" }}>
                 <Button width={"156px"} height={"46px"} text={"Fill The Form Out!"} borderRadius={"10px"} onClick={scrollToForm} />
             </div>
@@ -33,7 +35,7 @@ export default function QuestionForm() {
                 <QForm />
             </motion.div>
 
-            <Bottom />
+            <Bottom margin={"100px 0 0 0"} />
             <Footer />
         </div>
     )

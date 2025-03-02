@@ -42,7 +42,7 @@ export default function JoinUSPage() {
                     <JoinForm />
                 </motion.div>
             </div>
-            <Bottom />
+            <Bottom margin={"100px 0 0 0"} />
             <Footer />
         </div >
     )
