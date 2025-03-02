@@ -43,10 +43,23 @@ export default function JoinForm() {
         }
     };
 
-
     const handleSubmit = async (e) => {
         e.preventDefault();
+        console.log("작성된 form data보기 : ", formData)
 
+        try {
+            const response = await axios.post("http://localhost:3000/apply", formData, {
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+            console.log("서버 응답", response.data);
+            alert("신청이 완료 되었습니다!");
+
+        } catch (error) {
+            console.error("에러 발생", error)
+            alert("서버와 연결에 문제가 발생함")
+        }
     }
 
 
