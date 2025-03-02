@@ -1,43 +1,67 @@
 import { useState } from "react";
+import axios from "axios";
 import styles from "../../styles/JoinUs/JoinForm.module.css";
 
 export default function JoinForm() {
     const [formData, setFormData] = useState({
         name: "",
-        studentId: "",
-        phone: "",
-        gender: "",
-        department: "소프트웨어과",
-        birthday: "",
-        dormitory: "통학생",
-        fiveWords: "",
-        motivation: "",
+        student_number: "",
+        phone_number: "",
+        gender: "남성",
+        major: "소프트웨어과",
+        birth_date: "",
+        lived_dormitory: "통학생",
+        five_letters: "",
+        motivate: "",
     });
 
     const handleChange = (e) => {
         const { name, value } = e.target;
 
-        const MAX_LENGTH = {
-            studentId: 4,
-            fiveWords: 5,
-            motivation: 300,
-        }
+        if (name === "phone_number") {
+            if (!value.includes('-')) {
+                const formattedValue = value.replace(/[^\d]/g, '').replace(/(\d{3})(\d{4})(\d{4})/, '$1-$2-$3');
+                setFormData({ ...formData, [name]: formattedValue });
+            } else {
+                setFormData({ ...formData, [name]: value });
+            }
+        } else {
+            const MAX_LENGTH = {
+                student_number: 4,
+                five_letters: 5,
+                motivate: 300,
+            };
 
-        if (
-            (name === "studentId" && value.length <= MAX_LENGTH.studentId) ||
-            (name === "fiveWords" && value.length <= MAX_LENGTH.fiveWords) ||
-            (name === "motivation" && value.length <= MAX_LENGTH.motivation) ||
-            (name !== "studentId" && name !== "fiveWords" && name !== "motivation")
-        ) {
-            setFormData({ ...formData, [name]: value });
+            if (
+                (name === "student_number" && value.length <= MAX_LENGTH.student_number) ||
+                (name === "five_letters" && value.length <= MAX_LENGTH.five_letters) ||
+                (name === "motivate" && value.length <= MAX_LENGTH.motivate) ||
+                (name !== "student_number" && name !== "five_letters" && name !== "motivate")
+            ) {
+                setFormData({ ...formData, [name]: value });
+            }
         }
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log("제출된 데이터", formData);
-        alert("신청이 완료 되었습니다!");
-    };
+        console.log("작성된 form data보기 : ", formData)
+
+        try {
+            const response = await axios.post("http://localhost:3000/apply", formData, {
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+            console.log("서버 응답", response.data);
+            alert("신청이 완료 되었습니다!");
+
+        } catch (error) {
+            console.error("에러 발생", error)
+            alert("서버와 연결에 문제가 발생함")
+        }
+    }
+
 
     return (
         <div>
@@ -59,8 +83,8 @@ export default function JoinForm() {
                         <label>학번*</label>
                         <input
                             type="text"
-                            name="studentId"
-                            value={formData.studentId}
+                            name="student_number"
+                            value={formData.student_number}
                             onChange={handleChange}
                             placeholder="1101"
                             maxLength={4}
@@ -72,8 +96,8 @@ export default function JoinForm() {
                 <label>전화번호*</label>
                 <input
                     type="text"
-                    name="phone"
-                    value={formData.phone}
+                    name="phone_number"
+                    value={formData.phone_number}
                     onChange={handleChange}
                     placeholder="010-0000-0000"
                     required
@@ -95,8 +119,8 @@ export default function JoinForm() {
                     <div className={styles.width}>
                         <label>학과*</label>
                         <select
-                            name="department"
-                            value={formData.department}
+                            name="major"
+                            value={formData.major}
                             onChange={handleChange}
                             required
                         >
@@ -110,8 +134,8 @@ export default function JoinForm() {
                         <label>생년월일*</label>
                         <input
                             type="text"
-                            name="birthday"
-                            value={formData.birthday}
+                            name="birth_date"
+                            value={formData.birth_date}
                             onChange={handleChange}
                             placeholder="090101"
                             required
@@ -121,8 +145,8 @@ export default function JoinForm() {
 
                 <label>기숙사 여부*</label>
                 <select
-                    name="dormitory"
-                    value={formData.dormitory}
+                    name="lived_dormitory"
+                    value={formData.lived_dormitory}
                     onChange={handleChange}
                     required
                 >
@@ -133,8 +157,8 @@ export default function JoinForm() {
                 <label>나를 다섯 글자로 표현한다면*</label>
                 <input
                     type="text"
-                    name="fiveWords"
-                    value={formData.fiveWords}
+                    name="five_letters"
+                    value={formData.five_letters}
                     onChange={handleChange}
                     maxLength={5}
                     placeholder="ex) 완전열정적"
@@ -143,15 +167,15 @@ export default function JoinForm() {
 
                 <label>지원동기*</label>
                 <textarea
-                    name="motivation"
-                    value={formData.motivation}
+                    name="motivate"
+                    value={formData.motivate}
                     onChange={handleChange}
                     maxLength={300}
                     placeholder="지원동기를 작성해주세요(최대 300자)"
                     required
                 />
                 <div style={{ margin: "10px 0", fontSize: "14px" }}>
-                    {formData.motivation.length}/300
+                    {formData.motivate.length}/300
                 </div>
 
                 <button type="submit" className={styles.submitButton}>제출하기</button>

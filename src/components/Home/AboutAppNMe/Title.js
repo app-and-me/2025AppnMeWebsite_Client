@@ -11,7 +11,7 @@ export default function Title({ title1, title2, margin }) {
     return (
         <TitleStyle>
             <p style={{ margin: margin, whiteSpace: "nowrap" }}>{title1}</p>
-            <p style={{ marginTop: "2px" }}>{title2}</p>
+            <p style={{ marginTop: "2px", whiteSpace: "nowrap" }}>{title2}</p>
         </TitleStyle>
     )
 }

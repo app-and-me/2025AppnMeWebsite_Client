@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
+import Header from "../components/Common/Header";
 import Project from "../components/Home/AboutAppNMe/Project";
 import Footer from "../components/Common/Footer";
 import LanguageCard from "../components/Home/LanguageCard";
@@ -42,15 +43,17 @@ export default function HomePage() {
         };
     }, []);
     return (
+
         <div className={styles.allContainer}>
+            <Header />
             {isFooterVisible && <TransparentBottom />}
             <div className={styles.mainWrapper}>
                 <MainTitle />
                 <ScrollingImages />
             </div>
 
-            <div className={styles.introduce}><SectionBlock dotTitle={"APP & ME"} title1={"지금부터"}
-                title2={"APP & ME를 소개합니다!"} marginBottom={"60px"} /></div>
+            <div className={styles.introduce}><SectionBlock dotTitle={"APP & ME"} title1={"APP & ME"}
+                title2={"동아리를 소개합니다!"} marginBottom={"60px"} /></div>
             <Bottom />
 
             <div style={{ margin: "7vh 0 18vh 0" }}><MainAboutAppNMe /></div>
