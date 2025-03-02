@@ -6,6 +6,7 @@ import Bottom from "../components/Common/Bottom";
 import Footer from "../components/Common/Footer";
 import Header from "../components/Common/Header";
 
+import styles from "../styles/QnA/FaQ.module.css"
 export default function PrizePage() {
     return (
         <div>
@@ -24,7 +25,7 @@ export default function PrizePage() {
                 </div>
             </div>
             <Bottom />
-            <FaQ />
+            <div className={styles.faqAllContainer}><FaQ /></div>
             <JoinUsNow />
             <Footer />
         </div>

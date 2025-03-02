@@ -1,6 +1,8 @@
 import styles from "../../styles/JoinUs/JoinForm.module.css"
 import styles2 from "../../styles/JoinUs/JoinUsPage.module.css"
 import { useState } from "react"
+import axios from "axios";
+
 export default function QForm() {
     const [formData, setFormData] = useState({
         content: "",
@@ -12,11 +14,19 @@ export default function QForm() {
         setFormData({ ...formData, [name]: value, })
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        //나중에 api로 백에 저장하기
+        console.log(formData)
 
-        alert("질문이 등록되었습니다!")
+        try {
+            const response = await axios.post("http://localhost:3000/qna/question", formData)
+            console.log("응답 data: ", response.data)
+            alert("글이 작성되었습니다!")
+            setFormData({ content: "", password: "" })
+        } catch (error) {
+            console.error(error)
+            alert("error 발생")
+        }
     }
 
     return (

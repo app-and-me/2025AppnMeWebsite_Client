@@ -6,6 +6,7 @@ import Bottom from "../components/Common/Bottom"
 import Footer from "../components/Common/Footer"
 import FaQList from "../components/QnA/FaQList"
 import Header from "../components/Common/Header"
+import AnswerFaQList from "../components/QnA/AnswerFaQList"
 import styles from "../styles/QnA/QnAPage.module.css"
 export default function QnAPage() {
     const navigate = useNavigate()
@@ -39,6 +40,7 @@ export default function QnAPage() {
             </div>
 
             <div className={styles["qnaList-container"]}>
+                <AnswerFaQList />
                 <FaQList addClass={styles["faq-all-container"]} />
             </div>
             <Bottom />
