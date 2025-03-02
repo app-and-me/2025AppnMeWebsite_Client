@@ -3,6 +3,7 @@ import Button from "../components/Common/Button"
 import Footer from "../components/Common/Footer"
 import Bottom from "../components/Common/Bottom"
 import QForm from "../components/QnA/qForm"
+import Header from "../components/Common/Header"
 
 import { useRef } from "react";
 import { motion } from "framer-motion";
@@ -17,6 +18,7 @@ export default function QuestionForm() {
     };
     return (
         <div>
+            <Header />
             <TitleCard
                 btnHeight={"28px"} btnWeight={"46px"} borderRadius={"6px"} fontSize={"12px"} btnText={"2025"}
                 mainTitle={"질문 폼 입니다!"}

@@ -5,6 +5,7 @@ import DotTitle from "../components/Common/DotTitle"
 import Bottom from "../components/Common/Bottom"
 import Footer from "../components/Common/Footer"
 import FaQList from "../components/QnA/FaQList"
+import Header from "../components/Common/Header"
 import styles from "../styles/QnA/QnAPage.module.css"
 export default function QnAPage() {
     const navigate = useNavigate()
@@ -13,6 +14,7 @@ export default function QnAPage() {
     }
     return (
         <div>
+            <Header />
             <div className={styles["all-container"]}>
                 <TitleCard
                     btnText={"14기"} btnWeight={"41px"} btnHeight={"28px"} borderRadius={"6px"} fontSize={"12px"}
