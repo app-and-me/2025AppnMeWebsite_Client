@@ -22,6 +22,11 @@ export default function Btn({ onClick, width, backColor, fontColor }) {
         &:hover {
             opacity: ${(props) => (props.isInstagram ? 0.6 : 1)};
         }
+
+        @media (max-width: 700px) {
+            margin:0;
+     }
+        
     `;
 
     const ButtonContainer = styled.div`
@@ -32,6 +37,13 @@ export default function Btn({ onClick, width, backColor, fontColor }) {
         &:hover {
             opacity: ${(props) => (props.isInstagram ? 0.6 : 1)};
         }
+        @media (max-width: 700px) {
+             
+            flex-direction:column;
+            align-items: center;
+            gap:12px;
+        
+     }
     `;
 
     return (
