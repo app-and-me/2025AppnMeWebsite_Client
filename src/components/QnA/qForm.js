@@ -19,7 +19,11 @@ export default function QForm() {
         console.log(formData)
 
         try {
-            const response = await axios.post("http://localhost:3000/qna/question", formData)
+            const response = await axios.post("http://localhost:3000/qna/question", formData, {
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            })
             console.log("응답 data: ", response.data)
             alert("글이 작성되었습니다!")
             setFormData({ content: "", password: "" })
