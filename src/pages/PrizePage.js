@@ -4,10 +4,12 @@ import FaQ from "../components/QnA/FaQ";
 import JoinUsNow from "../components/Common/JoinUsNow";
 import Bottom from "../components/Common/Bottom";
 import Footer from "../components/Common/Footer";
+import Header from "../components/Common/Header";
 
 export default function PrizePage() {
     return (
         <div>
+            <Header />
             <div style={{ position: "relative", display: "flex", height: "506px", overflow: "hidden" }}>
                 <Banner />
 

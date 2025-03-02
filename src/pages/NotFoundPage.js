@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "../components/Common/Button";
 import Footer from "../components/Common/Footer";
+import Header from "../components/Common/Header";
 import styles from "../styles/NotFoundPage.module.css"
 
 export default function NotFound() {
@@ -11,6 +12,7 @@ export default function NotFound() {
     }
     return (
         <div>
+            <Header />
             <div className={styles["all-container"]}>
                 <div style={{ display: "flex", alignItems: "center", columnGap: "12px", margin: "20px 0 34px 0" }}>
                     <div className={styles["btn-container"]}>OOPS</div>

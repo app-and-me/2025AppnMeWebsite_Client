@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+
+import Header from "../components/Common/Header";
 import TitleCard from "../components/Common/TitleCard";
 import Banner from "../components/Home/MainTitle/Banner";
 import SectionBlock from "../components/Home/SectionBlock"
@@ -39,6 +41,7 @@ export default function AboutUsPage() {
     const Member13 = ["지수민", "이효은", "유성윤", "강재호", "이서현", "송지아"]
     return (
         <div>
+            <Header />
             {isFooterVisible && <TransparentBottom />}
             <div style={{ position: "relative", display: "flex", height: "506px", overflow: "hidden" }}>
                 <Banner />
