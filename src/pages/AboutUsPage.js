@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-import Header from "../components/Common/Header";
+import Header from "../components/Common/TopHeader";
 import TitleCard from "../components/Common/TitleCard";
 import Banner from "../components/Home/MainTitle/Banner";
 import SectionBlock from "../components/Home/SectionBlock"

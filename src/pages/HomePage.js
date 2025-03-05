@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-import Header from "../components/Common/Header";
+import Header from "../components/Common/TopHeader";
+
 import Project from "../components/Home/AboutAppNMe/Project";
 import Footer from "../components/Common/Footer";
 import LanguageCard from "../components/Home/LanguageCard";

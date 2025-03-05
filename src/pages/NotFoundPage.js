@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "../components/Common/Button";
 import Footer from "../components/Common/Footer";
-import Header from "../components/Common/Header";
+import Header from "../components/Common/TopHeader";
 import styles from "../styles/NotFoundPage.module.css"
 
 export default function NotFound() {

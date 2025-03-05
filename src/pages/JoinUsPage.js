@@ -1,5 +1,5 @@
 import TitleCard from "../components/Common/TitleCard";
-import Header from "../components/Common/Header";
+import Header from "../components/Common/TopHeader";
 import Button from "../components/Common/Button";
 import JoinForm from "../components/JoinUs/JoinForm";
 import Bottom from "../components/Common/Bottom";
