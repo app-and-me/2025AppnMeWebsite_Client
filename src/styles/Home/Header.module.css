@@ -15,16 +15,19 @@
     gap: 40px;
 }
 
-ul {
+.menuList {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 40px;
 }
 
-li {
+.nav-item {
     font-size: 16px;
-    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
 }
 
 .logo {
@@ -69,6 +72,14 @@ li {
     
 
 }
+
+@media (max-width: 800px) {
+    .applyButton {
+        position: absolute;
+        right: 30px; 
+    }
+}
+
 
 
 @media (max-width: 1200px) {

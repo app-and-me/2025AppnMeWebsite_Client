@@ -21,37 +21,36 @@ export default function Header() {
 
                 <div className={styles.logo}><img src="/images/Logo/logo.png" alt="App & Me Logo" /></div>
 
-                <ul className={menuOpen ? styles.active : ""}>
+                <ul className={`${styles.menuList} ${menuOpen ? styles.active : ""}`}>
 
-                    <li>
+                    <li className="nav-item">
                         <Link to="/" onClick={() => setMenuOpen(false)}>
                             Home
                         </Link>
                     </li>
-                    <li>
+                    <li className="nav-item">
                         <Link to="/AboutUs" onClick={() => setMenuOpen(false)}>
                             About Us
                         </Link>
                     </li>
-                    <li>
+                    <li className="nav-item">
                         <Link to="/Prize" onClick={() => setMenuOpen(false)}>
                             Prize
                         </Link>
                     </li>
-                    <li>
+                    <li className="nav-item">
                         <Link to="/JoinUs" onClick={() => setMenuOpen(false)}>
                             Join Us
                         </Link>
                     </li>
-                    <li>
+                    <li className="nav-item">
                         <Link to="/QnA" onClick={() => setMenuOpen(false)}>
                             Q&A
                         </Link>
                     </li>
 
 
-                    <li className={styles.applyButton}>
-                    <Link to="/JoinUs">
+                    <li className={`${styles.applyButton} apply-button-container`}>                    <Link to="/JoinUs">
                         <button>지원하기</button>
                     </Link>
                 </li>
