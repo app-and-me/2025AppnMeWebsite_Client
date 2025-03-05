@@ -73,14 +73,6 @@
 
 }
 
-@media (max-width: 800px) {
-    .applyButton {
-        position: absolute;
-        right: 30px; 
-    }
-}
-
-
 
 @media (max-width: 1200px) {
     .header {
@@ -91,6 +83,21 @@
         display: none;
     } */
 
+}
+
+@media (max-width: 800px) {
+    /* .applyButton {
+        position: absolute;
+        right: 30px; 
+    } */
+
+    .nav {
+        gap: 30px;
+    }
+
+    .menuList {
+        gap: 18px;
+    }
 }
 
 @media (max-width: 700px) {
