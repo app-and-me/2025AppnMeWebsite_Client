@@ -2,12 +2,7 @@ import { motion } from "framer-motion";
 import styles from "../../../styles/Home/ImageSlider.module.css";
 
 export default function ScrollingImages() {
-    const images = [
-        "/images/Logo/slide1.png",
-        "/images/Logo/slide2.png",
-        "/images/Logo/slide3.png",
-        "/images/Logo/slide4.png"
-    ];
+    const images = ["1", "2", "1", "2"];
 
     return (
         <div className={styles.allContainer}>
@@ -19,7 +14,7 @@ export default function ScrollingImages() {
             >
                 {/* 이미지 배열을 2번 반복해서 붙이기 */}
                 {[...images, ...images].map((src, index) => (
-                    <img key={index} src={src} className={styles.slideImg} />
+                    <img key={index} src={`/images/Logo/slide${src}.png`} className={styles.slideImg} />
                 ))}
             </motion.div>
         </div>
