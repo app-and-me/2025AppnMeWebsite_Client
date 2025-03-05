@@ -3,7 +3,7 @@ import Button from "../components/Common/Button"
 import Footer from "../components/Common/Footer"
 import Bottom from "../components/Common/Bottom"
 import QForm from "../components/QnA/qForm"
-import Header from "../components/Common/Header"
+import Header from "../components/Common/TopHeader"
 
 import { useRef } from "react";
 import { motion } from "framer-motion";

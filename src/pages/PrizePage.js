@@ -4,7 +4,7 @@ import FaQ from "../components/QnA/FaQ";
 import JoinUsNow from "../components/Common/JoinUsNow";
 import Bottom from "../components/Common/Bottom";
 import Footer from "../components/Common/Footer";
-import Header from "../components/Common/Header";
+import Header from "../components/Common/TopHeader";
 
 import styles from "../styles/QnA/FaQ.module.css"
 export default function PrizePage() {

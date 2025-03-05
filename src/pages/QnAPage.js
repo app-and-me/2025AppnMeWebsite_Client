@@ -5,7 +5,7 @@ import DotTitle from "../components/Common/DotTitle"
 import Bottom from "../components/Common/Bottom"
 import Footer from "../components/Common/Footer"
 import FaQList from "../components/QnA/FaQList"
-import Header from "../components/Common/Header"
+import Header from "../components/Common/TopHeader"
 import AnswerFaQList from "../components/QnA/AnswerFaQList"
 import styles from "../styles/QnA/QnAPage.module.css"
 export default function QnAPage() {
