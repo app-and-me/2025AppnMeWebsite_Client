@@ -40,6 +40,7 @@
     height: 46px;
     font-size: 16px;
     font-weight: 400;
+    margin: 0;
 }
 
 
@@ -67,9 +68,9 @@
 @media (min-width: 701px) {
     .applyButton {
         position: absolute;
-        right: 120px; 
+        right: 120px;
     }
-    
+
 
 }
 
@@ -121,30 +122,31 @@
         top: -100%;
         left: 0;
         right: 0;
-        background-color: black; 
+        background-color: black;
         display: flex;
         flex-direction: column;
         justify-content: start;
         align-items: start;
         gap: 15px;
         padding: 30px;
-        transition: top 0.3s ease;
+        transition: top 0.5s ease;
         z-index: 10;
     }
 
     .nav ul.active {
-        top: 91px; /*헤더가 91임*/
+        top: 71px;
+        /*헤더가 91임*/
     }
 
-      .applyButton {
-        width: 100%; 
+    .applyButton {
+        width: 100%;
         display: block;
     }
 
     .applyButton button {
         width: 100%;
-        max-width: 640px; 
-        height: 46px;
-        margin-top: 10px;
+        max-width: 640px;
+        height: 43px;
+        margin-top: 30px;
     }
 }
