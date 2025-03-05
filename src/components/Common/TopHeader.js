@@ -19,8 +19,9 @@ export default function Header() {
 
             <nav className={styles.nav}>
 
-                <div className={styles.logo}><img src="/images/Logo/logo.png" alt="App & Me Logo" /></div>
-
+            <Link to="/" className={styles.logo}>
+                    <img src="/images/Logo/logo.png" alt="App & Me Logo" />
+                </Link>
                 <ul className={`${styles.menuList} ${menuOpen ? styles.active : ""}`}>
 
                     <li className="nav-item">
