@@ -5,8 +5,7 @@ import axios from "axios";
 
 export default function QForm() {
     const [formData, setFormData] = useState({
-        content: "",
-        password: "",
+        content: ""
     })
 
     const handleChange = (e) => {
@@ -46,18 +45,6 @@ export default function QForm() {
                     className={styles.questionBox}
                     required
                 />
-                <div className={styles.width}>
-                    <label className={styles.pwLabel}>비밀번호 (질문 수정을 위한 용도입니다)*</label>
-                    <input
-                        type="password"
-                        name="password"
-                        value={formData.password}
-                        placeholder="비밀번호를 작성해주세요."
-                        onChange={handleChange}
-                        className={styles.passwordBox}
-                        required
-                    />
-                </div>
                 <button type="submit" className={styles.submitButton}>질문하기</button>
             </form>
         </div>

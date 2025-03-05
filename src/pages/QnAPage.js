@@ -40,7 +40,7 @@ export default function QnAPage() {
             </div>
 
             <div className={styles["qnaList-container"]}>
-                <AnswerFaQList />
+
                 <FaQList addClass={styles["faq-all-container"]} />
             </div>
             <Bottom />
