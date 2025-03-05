@@ -37,12 +37,14 @@
     margin-bottom: 10px;
 }
 
-.pageItem, .socialItem {
+.pageItem,
+.socialItem {
     margin-top: 20px;
     font-size: 16px;
 }
 
-.socialItem a {
+.socialItem a,
+.pageItem a {
     color: #aaaaaa;
 }
 
@@ -83,7 +85,8 @@
         font-size: 16px;
     }
 
-    .socialItem, .pageItem {
+    .socialItem,
+    .pageItem {
         font-size: 12px;
     }
 
