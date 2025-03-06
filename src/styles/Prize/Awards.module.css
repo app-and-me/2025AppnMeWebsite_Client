@@ -1,0 +1,77 @@
+.awardsContainer {
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 40px;
+  }
+  
+  .profileCard {
+    background-color: #0E0E0E;
+    border-radius: 16px;
+    width: 350px;
+    padding: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    width: 825px;
+    border: 1px solid #333333;
+  }
+  
+  .profileHeader {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .profileImage {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+  }
+  
+  .profileInfo {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .profileName {
+    margin: 0;
+    font-weight: 500;
+    line-height: 24px;
+    font-size: 16px;
+  }
+  
+  .profileBatch {
+    color: #999999;
+    font-size: 14px;
+  }
+  
+  .awardsSection {
+    margin-top: 20px;
+  }
+  
+  /* .awardsTitle {
+    font-size: 16px;
+    color: #999999;
+    margin-bottom: 10px;
+  } */
+  
+  .awardsList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .awardItem {
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #999999;
+  }
+  
