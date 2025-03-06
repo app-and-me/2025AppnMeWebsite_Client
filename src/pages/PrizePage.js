@@ -5,6 +5,7 @@ import JoinUsNow from "../components/Common/JoinUsNow";
 import Bottom from "../components/Common/Bottom";
 import Footer from "../components/Common/Footer";
 import Header from "../components/Common/TopHeader";
+import Awards from "../components/Prize/Awards";
 
 import styles from "../styles/QnA/FaQ.module.css"
 export default function PrizePage() {
@@ -25,6 +26,9 @@ export default function PrizePage() {
                 </div>
             </div>
             <Bottom />
+
+            <Awards />
+
             <div className={styles.faqAllContainer}><FaQ /></div>
             <JoinUsNow />
             <Footer />
