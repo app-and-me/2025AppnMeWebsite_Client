@@ -5,7 +5,7 @@
     align-items: center;
     flex-direction: column;
     gap: 20px;
-    /* margin-top: 40px; */
+    margin-top: 200px;
   }
   
   .profileCard {
@@ -85,8 +85,12 @@
   }
 
   @media (max-width: 700px) {
-    .profileCard {
-        max-width: 303px;
+    .awardsContainer {
+        padding: 0 30px;
+    }
+
+    .awardsContainer {
+        margin-top: 150px;
     }
 
   }
