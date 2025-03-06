@@ -1,7 +1,7 @@
 .all-container {
     display: flex;
     justify-content: center;
-    gap: 6vw;
+    gap: 7vw;
     margin: 208px 0 201px 0;
 }
 
@@ -17,7 +17,7 @@
 
 .history-container {
     overflow: scroll;
-    max-height: 1500px;
+    max-height: 700px;
     scrollbar-width: none;
 }
 
