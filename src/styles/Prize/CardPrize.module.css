@@ -2,46 +2,26 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
-    border-radius: 20px;
-}
-
-.contentContainer {
-    border-radius: 20px;
-    padding: 40px;
-    background: linear-gradient(308deg, rgba(0, 0, 0, 0.08) 0%, rgba(255, 0, 174, 0.03) 52.43238844313063%, var(--token-73242b55-57d1-4320-8897-28085a430c83, rgba(255, 255, 255, 0.02)) 100%);
 }
 
 
 .contentContainer img {
     width: 100%;
-    max-width: 500px;
-    border-radius: 20px;
+    max-width: 600px;
     margin-bottom: 20px;
 }
 
-.infoBtn {
-    width: fit-content;
-    height: 38px;
-    backdrop-filter: blur(2.5px);
-    background: linear-gradient(-7.64244e-08deg, rgba(199, 199, 199, 0.06) 0%, rgba(71, 71, 71, 0.06) 100%);
-    border-radius: 10px;
-    padding: 6px 14px;
-}
+
 
 @media (max-width:1200px) {
     .contentContainer img {
         max-width: none;
-        height: 360px;
-    }
 
-    .contentContainer {
-
-        /*임시*/
     }
 }
 
 @media (max-width:700px) {
     .contentContainer img {
-        height: 260px;
+        height: 100%;
     }
 }
