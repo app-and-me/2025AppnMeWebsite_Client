@@ -25,10 +25,10 @@ export default function PrizePage() {
                     />
                 </div>
             </div>
-            <Bottom />
-
             <Awards />
-
+            <div style={{ marginTop: "50px" }}>
+                <Bottom />
+            </div>
             <div className={styles.faqAllContainer}><FaQ /></div>
             <JoinUsNow />
             <Footer />
