@@ -17,8 +17,9 @@ export default function OurPrize() {
 
             <div className={styles["history-container"]}>
                 <DotTitle dotTitle={"Our Prize"} />
-                <Title title1={"앱앤미 부원들의"} title2={"자랑스러운 수상 내역"} margin={"0 0 10px 0"} />
-
+                <div style={{ marginTop: "30px" }}>
+                    <Title title1={"앱앤미 부원들의"} title2={"자랑스러운 수상 내역"} margin={"0 0 10px 0"} />
+                </div>
                 <Content marginTop={"10px"}
                     title1={"멋진 상들을 받고 싶다면, 지금 지원하세요!"}
                     title2={"멋진 선배들이 여러분을 간절히 기다리고 있습니다."} />

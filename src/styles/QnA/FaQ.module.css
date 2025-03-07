@@ -11,6 +11,14 @@
     padding: 0 120px;
 }
 
+.PrizeTop {
+    position: relative;
+    display: flex;
+    height: 506px;
+    overflow: hidden;
+    margin-top: 70px;
+}
+
 @media (max-width:1200px) {
     .allContainer {
         flex-direction: column;
@@ -30,5 +38,9 @@
 
     .faqAllContainer {
         padding: 0 30px;
+    }
+
+    .PrizeTop {
+        margin: 0;
     }
 }
