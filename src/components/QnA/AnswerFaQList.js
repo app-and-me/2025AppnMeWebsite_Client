@@ -36,7 +36,7 @@ export default function FaQList({ addClass }) {
                                 className={styles.questionTitle}
                                 onClick={() => toggleItem(faq.id)}
                             >
-                                {faq.id}. {faq.content}
+                                {faq.content}
                             </span>
                             <span
                                 className={styles["toggle-icon"]}

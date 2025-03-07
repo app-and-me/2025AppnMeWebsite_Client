@@ -1,8 +1,20 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import styles from "../../styles/JoinUs/JoinForm.module.css";
 
 export default function JoinForm() {
+    const navigate = useNavigate();
+    const [isPastDeadline, setIsPastDeadline] = useState(false);
+    useEffect(() => {
+        const today = new Date();
+        const deadline = new Date(today.getFullYear(), 2, 30); //3월 30일(임시)
+
+        if (today > deadline) {
+            setIsPastDeadline(true)
+        }
+    }, [])
+
     const [formData, setFormData] = useState({
         name: "",
         student_number: "",
@@ -21,10 +33,12 @@ export default function JoinForm() {
     })
 
     const handleChange = (e) => {
+        if (isPastDeadline) return;
+
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value })
 
-        if (name === "birth_data") {
+        if (name === "birth_date") {
             if (!/^\d{6}$/.test(value)) {
                 setErrors({ ...errors, birth_date: "생년월일은 YYMMDD 형식으로 입력해주세요. 예: 090101" })
             } else {
@@ -33,48 +47,44 @@ export default function JoinForm() {
         }
 
         if (name === "five_letters") {
-            if (value.length < 5) {
-                setErrors({ ...errors, five_letters: "다섯 글자로 입력해주세요." })
-            } else { setErrors({ ...errors, five_letters: "" }) }
+            if (value.length !== 5) {
+                setErrors(prev => ({ ...prev, five_letters: "다섯 글자로 입력해주세요." }));
+            } else {
+                setErrors(prev => ({ ...prev, five_letters: "" }));
+            }
         }
 
         if (name === "phone_number") {
-            if (!value.includes('-')) {
-                const formattedValue = value.replace(/[^\d]/g, '').replace(/(\d{3})(\d{4})(\d{4})/, '$1-$2-$3');
-                setFormData({ ...formData, [name]: formattedValue });
-            } else {
-                setFormData({ ...formData, [name]: value });
-            }
-        } else {
-            const MAX_LENGTH = {
-                student_number: 4,
-                five_letters: 5,
-                motivate: 300,
-            };
-
-            if (
-                (name === "student_number" && value.length <= MAX_LENGTH.student_number) ||
-                (name === "five_letters" && value.length <= MAX_LENGTH.five_letters) ||
-                (name === "motivate" && value.length <= MAX_LENGTH.motivate) ||
-                (name !== "student_number" && name !== "five_letters" && name !== "motivate")
-            ) {
-                setFormData({ ...formData, [name]: value });
-            }
+            const formattedValue = value.replace(/[^\d]/g, '').slice(0, 11);
+            const phoneFormatted = formattedValue.replace(/(\d{3})(\d{4})(\d{4})/, '$1-$2-$3');
+            setFormData(prev => ({ ...prev, [name]: phoneFormatted }));
+            return;
         }
+
+        const MAX_LENGTH = {
+            student_number: 4,
+            five_letters: 5,
+            motivate: 300,
+        };
+
+        if (MAX_LENGTH[name] && value.length > MAX_LENGTH[name]) return;
+        setFormData(prev => ({ ...prev, [name]: value }));
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        if (isPastDeadline) {
+            alert('동아리 모집 기간이 지났습니다.')
+            return;
+        }
 
         if (!/^\d{6}$/.test(formData.birth_date)) {
             setErrors({ ...errors, birth_date: "생년월일은 YYMMDD 형식으로 입력해주세요. 예: 090101" });
             return;
         }
 
-        if (formData.five_letters.length < 5) {
-            setErrors({ ...errors, five_letters: "다섯 글자로 입력해주세요." });
-            return;
-        }
+
         console.log("작성된 form data보기 : ", formData)
 
         try {
@@ -85,6 +95,8 @@ export default function JoinForm() {
             });
             console.log("서버 응답", response.data);
             alert("신청이 완료 되었습니다!");
+            navigate('/')
+
 
             setFormData({
                 name: "", student_number: "", phone_number: "",
@@ -96,6 +108,7 @@ export default function JoinForm() {
         } catch (error) {
             console.error("에러 발생", error)
             alert("서버와 연결에 문제가 발생함")
+            navigate('/')
         }
     }
 
@@ -112,6 +125,7 @@ export default function JoinForm() {
                             value={formData.name}
                             onChange={handleChange}
                             placeholder="김미림"
+                            disabled={isPastDeadline}
                             required
                         />
                     </div>
@@ -125,6 +139,7 @@ export default function JoinForm() {
                             onChange={handleChange}
                             placeholder="1101"
                             maxLength={4}
+                            disabled={isPastDeadline}
                             required
                         />
                     </div>
@@ -137,6 +152,7 @@ export default function JoinForm() {
                     value={formData.phone_number}
                     onChange={handleChange}
                     placeholder="010-0000-0000"
+                    disabled={isPastDeadline}
                     required
                 />
 
@@ -147,6 +163,7 @@ export default function JoinForm() {
                             name="gender"
                             value={formData.gender}
                             onChange={handleChange}
+                            disabled={isPastDeadline}
                             required
                         >
                             <option value="여성">여성</option>
@@ -159,6 +176,7 @@ export default function JoinForm() {
                             name="major"
                             value={formData.major}
                             onChange={handleChange}
+                            disabled={isPastDeadline}
                             required
                         >
                             <option value="소프트웨어과">소프트웨어과</option>
@@ -175,6 +193,7 @@ export default function JoinForm() {
                             value={formData.birth_date}
                             onChange={handleChange}
                             placeholder="090101"
+                            disabled={isPastDeadline}
                             required
                         />
                         {errors.birth_date && <div style={{ color: "red" }}>{errors.birth_date}</div>}
@@ -186,6 +205,7 @@ export default function JoinForm() {
                     name="lived_dormitory"
                     value={formData.lived_dormitory}
                     onChange={handleChange}
+                    disabled={isPastDeadline}
                     required
                 >
                     <option value="통학생">통학생</option>
@@ -200,6 +220,7 @@ export default function JoinForm() {
                     onChange={handleChange}
                     maxLength={5}
                     placeholder="ex) 완전열정적"
+                    disabled={isPastDeadline}
                     required
                 />
                 {errors.five_letters && <div style={{ color: "red" }}>{errors.five_letters}</div>}
@@ -211,6 +232,7 @@ export default function JoinForm() {
                     onChange={handleChange}
                     maxLength={300}
                     placeholder="지원동기를 작성해주세요(최대 300자)"
+                    disabled={isPastDeadline}
                     required
                 />
                 <div style={{ margin: "10px 0", fontSize: "14px" }}>
@@ -218,6 +240,11 @@ export default function JoinForm() {
                 </div>
 
                 <button type="submit" className={styles.submitButton}>제출하기</button>
+                {isPastDeadline && (
+                    <div style={{ color: "red", marginTop: "10px" }}>
+                        신청 기간이 마감되었습니다.
+                    </div>
+                )}
             </form>
         </div>
     );

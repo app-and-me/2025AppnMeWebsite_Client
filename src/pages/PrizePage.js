@@ -12,7 +12,9 @@ export default function PrizePage() {
     return (
         <div>
             <Header />
-            <div style={{ position: "relative", display: "flex", height: "506px", overflow: "hidden", marginTop: "70px" }}>
+            <div
+                className={styles.PrizeTop}
+            >
                 <Banner />
 
                 <div style={{ position: "absolute", zIndex: "1", left: "50%", top: "50%", transform: "translate(-50%, -50%)" }}>
