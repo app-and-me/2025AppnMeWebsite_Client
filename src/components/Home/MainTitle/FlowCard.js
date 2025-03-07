@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import styles from "../../../styles/Home/ImageSlider.module.css";
 
 export default function ScrollingImages() {
-    const images = ["1", "2", "1", "2"];
+    const images = ["1", "4", "1", "4"];
 
     return (
         <div className={styles.allContainer}>
