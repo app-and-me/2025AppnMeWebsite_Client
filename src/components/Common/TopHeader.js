@@ -19,7 +19,7 @@ export default function Header() {
 
             <nav className={styles.nav}>
 
-            <Link to="/" className={styles.logo}>
+                <Link to="/" className={styles.logo}>
                     <img src="/images/Logo/logo.png" alt="App & Me Logo" />
                 </Link>
                 <ul className={`${styles.menuList} ${menuOpen ? styles.active : ""}`}>
@@ -54,8 +54,8 @@ export default function Header() {
                     <li className={`${styles.applyButton} apply-button-container`}>                    <Link to="/JoinUs">
                         <button>지원하기</button>
                     </Link>
-                </li>
-                </ul>      
+                    </li>
+                </ul>
             </nav>
         </header>
     );
