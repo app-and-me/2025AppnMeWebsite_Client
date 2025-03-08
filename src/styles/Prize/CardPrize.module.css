@@ -11,6 +11,20 @@
     margin-bottom: 20px;
 }
 
+.prizeBtnContainer {
+    position: relative;
+
+}
+
+.prizeBtnContainer img {}
+
+.showPrize {
+    position: absolute;
+    bottom: 0;
+
+
+
+}
 
 
 @media (max-width:1200px) {
