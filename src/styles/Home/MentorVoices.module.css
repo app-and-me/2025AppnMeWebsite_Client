@@ -14,7 +14,7 @@
     background: linear-gradient(180deg, #2B2B2B 0%, rgba(255, 0, 174, 0.21) 100%);
     backdrop-filter: blur(2px);
     border-radius: 20px;
-    padding: 0 30px;
+    padding: 0 30px 37px 30px;
     opacity: 1;
     width: 100%;
     max-width: 370px;
@@ -23,18 +23,22 @@
 .all-container img {
     width: 100%;
     max-width: 50px;
-    padding-top: 28px;
+    height: 50px;
+    margin-top: 28px;
+    border-radius: 100px;
+    box-shadow: rgba(255, 0, 234, 0.35) 2px 4px 24px 0px, rgba(255, 0, 0, 0.25) 0px 2px 4px 0px;
 }
 
 .memberInfo-container {
-    padding: 37px 0;
+    margin-top: 60px;
 }
 
 .message {
     margin-top: 20px;
     width: 100%;
     line-height: 1.5;
-    color: #FFFFFF80;
+    color: #FFFF;
+    font-weight: 200;
 }
 
 .major {
@@ -63,15 +67,20 @@
     margin: auto;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1280px) {
     .gridContainer {
         grid-template-columns: repeat(1, 1fr);
-        padding: 0 120px;
+        padding: 0 50px;
     }
 
     .all-container {
         width: 100% !important;
         max-width: none !important;
+        padding-bottom: 50px;
+    }
+
+    .memberInfo-container {
+        margin-top: 30px;
     }
 }
 
