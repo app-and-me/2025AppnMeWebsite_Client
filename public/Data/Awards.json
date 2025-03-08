@@ -23,7 +23,7 @@
         "교내 효행상",
         "Melbourne polytechnic 인턴쉽 수료"
       ],
-      "image": "/path/to/profile-image.png"
+      "image": "/images/Member/member1.png"
     },
     {
       "name": "하지민",
@@ -48,7 +48,7 @@
         "한국산업인력공단 글로벌 숙련 기술 전수 과정 수료",
         "人間中心設計コース 인턴십 과정 수료"
       ],
-      "image": "/path/to/profile-image-hajimin.png"
+      "image": "/images/Member/member2.png"
     },
     {
       "name": "배주연",
@@ -75,7 +75,7 @@
         "Cos Pro Python 2급 자격증 인증 상장",
         "2024 2학기 학급회장"
       ],
-      "image": "/path/to/profile-image-baejooyeon.png"
+      "image": "/images/Member/member4.png"
     },
     {
       "name": "황유진",
@@ -97,7 +97,7 @@
         "2024 모범학생상",
         "人間中心設計コース 인턴십 과정 수료"
       ],
-      "image": "/path/to/profile-image-hwangyujin.png"
+      "image": "/images/Member/member5.png"
     },
     {
       "name": "윤주영",
@@ -126,7 +126,7 @@
         "뤼튼과 함께하는 프롬프트 엔지니어 양성 (교육)",
         "2024 2학기 학급회장"
       ],
-      "image": "/path/to/profile-image-yunjooyoung.png"
+      "image": "/images/Member/member3.png"
     },    
     {
       "name": "승유빈",
@@ -135,7 +135,7 @@
         "2024 SW 동행 데모데이 - 장려상",
         "2024 미림 마이스터고 뉴미디어디자인 어워드 수상"
       ],
-      "image": "/path/to/profile-image-seungyubin.png"
+      "image": "/images/Member/member6.png"
     },
     {
       "name": "유성윤",
@@ -150,7 +150,7 @@
         "Minburi technical college 국제화 교육 지원 사업",
         "SW 동행 해커톤 - 후원 기업상"
       ],
-      "image": "/path/to/profile-image-yuseongyun.png"
+      "image": "/images/Member/member7.png"
     },
     {
       "name": "지수민",
@@ -167,7 +167,7 @@
         "Microsoft 디지털 임파워먼트",
         "2024 ESG AI Friends School 수료"
       ],
-      "image": "/path/to/profile-image-jisumin.png"
+      "image": "/images/Member/member8.png"
     },
     {
       "name": "승지아",
@@ -182,7 +182,7 @@
         "창의아이디어 경진대회 교내 본선 금상",
         "신입생 적응교육과정 우수상(디자인)"
       ],
-      "image": "/path/to/profile-image-seungjia.png"
+      "image": "/images/Member/member9.png"
     },
     {
       "name": "이호은",
@@ -201,7 +201,7 @@
         "학교 연합 로봇 SI 캠프 로봇 챌린지 교과능력상",
         "1학년 1학기 교과우수상(미디어콘텐츠, 성공적인 직업생활)"
       ],
-      "image": "/path/to/profile-image-leehoeun.png"
+      "image": "/images/Member/member12.png"
     },
     {
       "name": "이서현",
@@ -213,7 +213,7 @@
         "1학년 2학기 교과우수상(체육)",
         "봉사활동 감사장"
       ],
-      "image": "/path/to/profile-image-leeSeohyun.png"
+      "image": "/images/Member/member11.png"
     },
     {
       "name": "강재호",
@@ -226,7 +226,7 @@
         "2024 ESG AI Friends School 수료",
         "퀴튼과 함께하는 프로프트 엔지니어링"
       ],
-      "image": "/path/to/profile-image-kangjaeho.png"
+      "image": "/images/Member/member10.jpeg"
     }
   ]
   
