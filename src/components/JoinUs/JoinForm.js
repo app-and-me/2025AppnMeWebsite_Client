@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import styles from "../../styles/JoinUs/JoinForm.module.css";
@@ -6,12 +6,17 @@ import styles from "../../styles/JoinUs/JoinForm.module.css";
 export default function JoinForm() {
     const navigate = useNavigate();
     const [isPastDeadline, setIsPastDeadline] = useState(false);
+    const hasAlerted = useRef(false)
     useEffect(() => {
         const today = new Date();
         const deadline = new Date(today.getFullYear(), 2, 30); //3월 30일(임시)
 
         if (today > deadline) {
             setIsPastDeadline(true)
+            if (!hasAlerted.current) {
+                alert("동아리 모집 기간이 끝났습니다.");
+                hasAlerted.current = true;
+            }
         }
     }, [])
 
@@ -73,11 +78,11 @@ export default function JoinForm() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
         if (isPastDeadline) {
-            alert('동아리 모집 기간이 지났습니다.')
-            return;
+            alert('동아리 신청 기간이 마감되었습니다.')
+            return
         }
+
 
         if (!/^\d{6}$/.test(formData.birth_date)) {
             setErrors({ ...errors, birth_date: "생년월일은 YYMMDD 형식으로 입력해주세요. 예: 090101" });
@@ -96,6 +101,7 @@ export default function JoinForm() {
             console.log("서버 응답", response.data);
             alert("신청이 완료 되었습니다!");
             navigate('/')
+            window.scrollTo({ top: 0, behavior: "smooth" })
 
 
             setFormData({
@@ -166,8 +172,8 @@ export default function JoinForm() {
                             disabled={isPastDeadline}
                             required
                         >
-                            <option value="여성">여성</option>
-                            <option value="남성">남성</option>
+                            <option value="여성">여</option>
+                            <option value="남성">남</option>
                         </select>
                     </div>
                     <div className={styles.width}>
@@ -241,8 +247,8 @@ export default function JoinForm() {
 
                 <button type="submit" className={styles.submitButton}>제출하기</button>
                 {isPastDeadline && (
-                    <div style={{ color: "red", marginTop: "10px" }}>
-                        신청 기간이 마감되었습니다.
+                    <div style={{ color: "red", margin: "30px 0 10px 0" }}>
+                        모집 기간이 마감되었습니다.
                     </div>
                 )}
             </form>
