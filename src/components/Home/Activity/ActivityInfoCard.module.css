@@ -1,13 +1,24 @@
 .cardContainer {
-    background: linear-gradient(0.07383128568086761deg,
-            var(--token-f5219c3a-5ee2-4639-9e23-4bdcf5509ebd,
-                rgba(0, 85, 255, 0.15)) 0%,
-            var(--token-b456af2e-fd88-41ae-8686-ad7692875dfd,
-                rgba(97, 97, 97, 0.09)) 100%);
+    position: relative;
     border-radius: 30px;
+    background: linear-gradient(180deg, rgba(43, 43, 43, 1), rgba(255, 0, 174, 0.2));
+    backdrop-filter: blur(2px);
     padding: 20px 20px 40px;
     width: 100%;
 }
+
+/* 보더 효과 추가 */
+.cardContainer::before {
+    content: "";
+    position: absolute;
+    inset: -3px; /* 보더 크기 */
+    border-radius: 30px;
+    background: linear-gradient(180deg, rgba(43, 43, 43, 1), rgba(255, 0, 174, 0.2)); 
+    z-index: -1;
+}
+
+
+
 
 .detail {
     padding: 0 12px;
