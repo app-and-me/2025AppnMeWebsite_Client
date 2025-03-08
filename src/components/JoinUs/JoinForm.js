@@ -9,7 +9,7 @@ export default function JoinForm() {
     const hasAlerted = useRef(false)
     useEffect(() => {
         const today = new Date();
-        const deadline = new Date(today.getFullYear(), 2, 30); //3월 30일(임시)
+        const deadline = new Date(today.getFullYear(), 2, 21);
 
         if (today > deadline) {
             setIsPastDeadline(true)
@@ -93,7 +93,7 @@ export default function JoinForm() {
         console.log("작성된 form data보기 : ", formData)
 
         try {
-            const response = await axios.post("http://localhost:3000/apply", formData, {
+            const response = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/apply`, formData, {
                 headers: {
                     'Content-Type': 'application/json'
                 }

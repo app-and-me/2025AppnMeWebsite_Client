@@ -1,5 +1,6 @@
 .mainTitle {
     margin-top: 30px;
+    line-height: 1.3;
 }
 
 .mainTitle p {
@@ -10,7 +11,7 @@
 }
 
 .mainTitle p:nth-child(2) {
-    color: #FFFFFF99;
+    color: #FFF;
 }
 
 .subTitle p {

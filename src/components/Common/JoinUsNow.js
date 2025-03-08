@@ -17,10 +17,10 @@ export default function JoinUsNow() {
                     <div className={styles.dot}><DotTitle dotTitle={"Join Us Now"} /></div>
                     <p>App & Me</p>
                     <p>아직 지원하지 않으셨나요?</p>
-                    <p>정말 후회없는 선택일 것입니다!</p>
+                    <p style={{ fontWeight: "300" }}>정말 후회없는 선택일 거예요!</p>
                 </div>
                 <div style={{
-                    margin: "30px 0 0 0"
+                    margin: "50px 0 0 0"
                 }}>
                     <Button text={"지금 바로 지원하기"} width={"150px"} height={"46px"} borderRadius={"10px"} onClick={handleClick} />
                 </div>

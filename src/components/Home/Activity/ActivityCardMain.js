@@ -41,7 +41,7 @@ export default function ActivityCardMain() {
 
                 <ActivityInfoCard
                     title={"SW 동행 챌린지 데모데이"}
-                    content={"SW 동행 프로젝트에 앱앤미로 참여하여 수업과 멘토링을 통해 개발된 작품을 데모데이에서 전시를 하였습니다."}
+                    content={"SW 동행 프로젝트에 앱앤미로 참여하여 수업과 멘토링을 통해 개발된 작품을 데모데이에서 전시하였습니다. 다양한 기술을 배우고 실습하며 팀원들과 협업하는 소중한 경험을 쌓을 수 있었습니다. 또한, 데모데이를 통해 작품에 대한 피드백을 받고, 이를 바탕으로 개선하였습니다. "}
                     src={"05.jpg"}
                     className={styles["thirdImg"]}
 
