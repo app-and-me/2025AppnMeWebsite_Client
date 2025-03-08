@@ -85,8 +85,9 @@ export default function AboutUsPage() {
                 </div>
 
                 <Bottom />
-
-                <FaQ />
+                <div className={styles.faqContainer}>
+                    <FaQ />
+                </div>
             </div>
             <JoinUsNow />
             <Footer />

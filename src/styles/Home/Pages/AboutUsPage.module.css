@@ -21,13 +21,22 @@
 }
 
 .profile-img:hover {
-    transform: scale(1.04);
+    transform: scale(1.06);
     transition-duration: 2.5s;
 }
 
+.faqContainer {
+    padding: 0 120px;
+}
+
 @media (max-width: 1260px) {
+
     .responsive {
         padding: 0 50px;
+    }
+
+    .faqContainer {
+        padding: 0;
     }
 
     .profileContainer {
@@ -39,6 +48,9 @@
 }
 
 @media (max-width:1024px) {
+    .faqContainer {
+        padding: 0;
+    }
 
     .responsive {
         padding: 0 50px !important;
@@ -46,8 +58,9 @@
 }
 
 @media (max-width: 700px) {
-    .responsive {
-        /* padding: 0 30px; */
+
+    .faqContainer {
+        padding: 0;
     }
 
     .profileContainer {

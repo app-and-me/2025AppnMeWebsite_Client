@@ -7,6 +7,7 @@ import Footer from "../components/Common/Footer"
 import FaQList from "../components/QnA/FaQList"
 import Header from "../components/Common/TopHeader"
 import AnswerFaQList from "../components/QnA/AnswerFaQList"
+import Banner from "../components/Home/MainTitle/Banner"
 import styles from "../styles/QnA/QnAPage.module.css"
 export default function QnAPage() {
     const navigate = useNavigate()
@@ -16,6 +17,7 @@ export default function QnAPage() {
     return (
         <div>
             <Header />
+            <Banner height={"70%"} />
             <div className={styles["all-container"]}>
                 <TitleCard
                     btnText={"14기"} btnWeight={"41px"} btnHeight={"28px"} borderRadius={"6px"} fontSize={"12px"}
@@ -24,7 +26,7 @@ export default function QnAPage() {
                     subTitle1={"자유롭게 질문해주세요!"}
                 />
 
-                <div style={{ display: "flex", justifyContent: "center", margin: "38px 0 161px 0" }}>
+                <div className={styles.buttonContainer}>
                     <Button
                         width={"122px"} height={"46px"} borderRadius={"10px"}
                         text={"질문 하러 가기"}
@@ -35,7 +37,6 @@ export default function QnAPage() {
                 <div className={styles["qna-container"]}>
                     <DotTitle dotTitle={"Q&A"} />
                     <p className={styles["qna-title"]}>Q&A 게시판</p>
-                    <p style={{ color: "#FFFFFF99" }}>여기서 동아리 관련 질문들을 확인하실 수 있습니다!</p>
                 </div>
             </div>
 
@@ -43,6 +44,7 @@ export default function QnAPage() {
                 <AnswerFaQList />
                 <FaQList addClass={styles["faq-all-container"]} />
             </div>
+
             <Bottom />
             <Footer />
         </div>
