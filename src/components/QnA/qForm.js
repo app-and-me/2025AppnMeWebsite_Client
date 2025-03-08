@@ -57,7 +57,7 @@ export default function QForm() {
     }
 
     return (
-        <div>
+        <div className={styles.container}>
             <form onSubmit={handleSubmit} className={styles2.questionForm}>
 
                 <label>질문 내용*</label>
