@@ -10,7 +10,7 @@ export default function QForm() {
     const hasAlerted = useRef(false)
     useEffect(() => {
         const today = new Date();
-        const deadline = new Date(today.getFullYear(), 2, 30) //임시
+        const deadline = new Date(today.getFullYear(), 2, 21)
         if (today > deadline) {
             setIsPastDeadline(true)
             if (!hasAlerted.current) {
@@ -41,7 +41,7 @@ export default function QForm() {
 
 
         try {
-            const response = await axios.post("http://localhost:3000/qna/question", formData, {
+            const response = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/qna/question`, formData, {
                 headers: {
                     "Content-Type": "application/json",
                 },
