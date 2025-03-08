@@ -15,16 +15,7 @@ export default function CardPrize() {
             <div className={styles.contentContainer}>
                 <img src={`${imgSrc}1.png`}></img>
                 <img src={`${imgSrc}2.png`}></img>
-                <div className={styles.prizeBtnContainer}>
-                    <img src={`${imgSrc}3.png`}></img>
-                    <div className={styles.showPrize}>
-                        <Button text={"더 많은 수상내역 보러 가기"}
-                            width={"196px"} height={"46px"}
-                            borderRadius={"10px"}
-                            onClick={handlePrize}
-                        />
-                    </div>
-                </div>
+                <img src={`${imgSrc}3.png`} onClick={handlePrize}></img>
             </div>
 
         </div >
