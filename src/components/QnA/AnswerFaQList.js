@@ -15,7 +15,7 @@ export default function FaQList({ addClass }) {
 
     useEffect(() => {
         axios
-            .get(`${process.env.REACT_APP_API_BASE_URL}/qna`)
+            .get(`${process.env.REACT_APP_API_BASE_URL}/api/qna`)
             .then((response) => {
                 console.log("가져온 데이터 확인 : ", response.data);
                 setFaqs(response.data.data);
