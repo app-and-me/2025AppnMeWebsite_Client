@@ -20,10 +20,8 @@
 
 .showPrize {
     position: absolute;
-    bottom: 0;
-
-
-
+    bottom: 40px;
+    left: 30px;
 }
 
 

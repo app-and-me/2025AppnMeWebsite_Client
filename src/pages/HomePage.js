@@ -74,9 +74,7 @@ export default function HomePage() {
                 <ActivityCardMain />
             </div>
 
-
             <OurPrize />
-
 
             <SectionBlock dotTitle={"Photo"} title1={"앱앤미의 친목 사진"}
                 subTitle1={"선후배 간의 격식없이 다같이 친한 동아리로, 다양한 활동을 통해 선배들과 이야기를 하며 친목을 다져 더욱 친밀하고 가까운 사이입니다."}
