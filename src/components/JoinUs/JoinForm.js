@@ -9,7 +9,7 @@ export default function JoinForm() {
     const hasAlerted = useRef(false)
     useEffect(() => {
         const today = new Date();
-        const deadline = new Date(today.getFullYear(), 2, 21);
+        const deadline = new Date(today.getFullYear(), 2, 14);
 
         if (today > deadline) {
             setIsPastDeadline(true)
