@@ -120,7 +120,7 @@ export default function JoinForm() {
 
 
     return (
-        <div>
+        <div className={styles.borderContainer}>
             <form onSubmit={handleSubmit}>
                 <div className={styles.firstLine}>
                     <div className={styles.width}>
