@@ -10,15 +10,13 @@ export default function QForm() {
     const hasAlerted = useRef(false)
     useEffect(() => {
         const today = new Date();
-        const deadline = new Date(today.getFullYear(), 2, 21)
+        const deadline = new Date(today.getFullYear(), 2, 14)
         if (today > deadline) {
             setIsPastDeadline(true)
             if (!hasAlerted.current) {
                 alert('질문 기간이 끝났습니다.')
                 hasAlerted.current = true
             }
-
-
         }
     }, [])
     const [formData, setFormData] = useState({
@@ -28,8 +26,8 @@ export default function QForm() {
     const handleChange = (e) => {
         if (isPastDeadline) return;
         const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value, })
-    }
+        setFormData({ ...formData, [name]: value });
+    };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
