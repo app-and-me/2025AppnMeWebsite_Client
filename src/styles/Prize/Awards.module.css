@@ -126,6 +126,11 @@
   }
 
   @media (max-width: 700px) {
+
+    .cardContainer {
+        padding: 40px;
+    }
+
     .awardsContainer {
         padding: 0 30px;
     }
