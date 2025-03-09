@@ -46,6 +46,10 @@ select {
 }
 
 
+select:focus option {
+    background-color: black;
+    color: white;
+}
 
 .questionBox {
     height: 170px;
