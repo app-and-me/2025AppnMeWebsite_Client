@@ -2,9 +2,6 @@ import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import styles from "../../styles/JoinUs/JoinForm.module.css";
-import * as dotenv from 'dotenv';
-
-dotenv.config();
 
 export default function JoinForm() {
     const navigate = useNavigate();
