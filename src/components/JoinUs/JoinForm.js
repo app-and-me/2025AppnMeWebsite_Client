@@ -241,7 +241,7 @@ export default function JoinForm() {
                     disabled={isPastDeadline}
                     required
                 />
-                <div style={{ margin: "10px 0", fontSize: "14px" }}>
+                <div style={{ margin: "30px 0", fontSize: "14px" }}>
                     {formData.motivate.length}/300
                 </div>
 

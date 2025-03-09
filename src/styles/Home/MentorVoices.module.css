@@ -11,7 +11,7 @@
 
 .all-container {
     border: 6px solid var(--, rgba(255, 255, 255, 0.05));
-    background: linear-gradient(180deg, #2B2B2B 0%, rgba(255, 0, 174, 0.21) 100%);
+    background: linear-gradient(180deg, rgba(43, 43, 43, 0.80) 0%, rgba(255, 0, 174, 0.17) 100%);
     backdrop-filter: blur(2px);
     border-radius: 20px;
     padding: 0 30px 37px 30px;
