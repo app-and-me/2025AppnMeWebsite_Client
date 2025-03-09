@@ -127,7 +127,7 @@
 
     .menuButton {
         display: block;
-        margin-left: -35px;
+        margin: 45px 0 0 -35px;
     }
 
     .nav ul {
@@ -141,7 +141,7 @@
         justify-content: start;
         align-items: start;
         gap: 25px;
-        padding: 30px;
+        padding: 35px 30px 30px 30px;
         transition: top 0.5s ease;
         z-index: 10;
     }
