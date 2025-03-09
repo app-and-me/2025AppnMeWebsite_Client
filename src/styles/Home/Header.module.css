@@ -90,7 +90,6 @@
         right: 120px;
     }
 
-
 }
 
 
@@ -98,10 +97,6 @@
     .header {
         padding: 0 50px;
     }
-
-    /* .applyButton button{
-        display: none;
-    } */
 
 }
 
@@ -132,8 +127,7 @@
 
     .menuButton {
         display: block;
-        /* order: -1; */
-        /* margin-top: 40px; */
+        margin-left: -35px;
     }
 
     .nav ul {
