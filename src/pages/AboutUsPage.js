@@ -12,6 +12,7 @@ import Footer from "../components/Common/Footer";
 import TransparentBottom from "../components/Common/TransparentBottom";
 import styles from "../styles/Home/Pages/AboutUsPage.module.css"
 
+
 export default function AboutUsPage() {
     const [isFooterVisible, setIsFooterVisible] = useState(true);
     const navigate = useNavigate();

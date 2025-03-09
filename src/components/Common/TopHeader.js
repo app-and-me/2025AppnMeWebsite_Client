@@ -52,7 +52,7 @@ export default function Header() {
 
 
                     <li className={`${styles.applyButton} apply-button-container`}>                    <Link to="/JoinUs">
-                        <button>지원하기</button>
+                        <div>지원하기</div>
                     </Link>
                     </li>
                 </ul>

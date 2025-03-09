@@ -36,12 +36,29 @@
     height: 17px;
 }
 
-.applyButton button {
+.applyButton {
     width: 89px;
     height: 46px;
+}
+
+.applyButton div {
+    width: 89px;
+    height: 40px;
     font-size: 16px;
     font-weight: 400;
     margin: 0;
+
+    border-radius: 10px;
+    border: none;
+    background-color: #FF00AE;
+    box-shadow: 0px 8px 40px 0px rgba(255, 0, 174, 0.5),
+        inset 0px 0px 10px 1px rgba(255, 255, 255, 0),
+        0px 0px 0px 1px rgb(255, 0, 174);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 
@@ -57,6 +74,7 @@
     font-size: 20px;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
+    margin: 0px;
 }
 
 .menuButton:focus,
@@ -105,7 +123,7 @@
 @media (max-width: 700px) {
 
     .header {
-        padding: 0 30px;
+        padding: 0px;
     }
 
     .logo {
@@ -114,8 +132,8 @@
 
     .menuButton {
         display: block;
-        order: -1;
-        margin-top: 40px;
+        /* order: -1; */
+        /* margin-top: 40px; */
     }
 
     .nav ul {
