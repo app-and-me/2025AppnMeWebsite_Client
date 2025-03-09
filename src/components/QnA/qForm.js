@@ -3,6 +3,8 @@ import styles2 from "../../styles/JoinUs/JoinUsPage.module.css"
 import { useState, useEffect, useRef } from "react"
 import { Navigate, useNavigate } from "react-router-dom";
 import axios from "axios";
+import * as dotenv from 'dotenv';
+dotenv.config();
 
 export default function QForm() {
     const navigate = useNavigate()

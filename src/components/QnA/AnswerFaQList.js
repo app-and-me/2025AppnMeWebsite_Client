@@ -1,6 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
 import styles from "../../styles/QnA/FaQList.module.css";
 import axios from "axios";
+import * as dotenv from 'dotenv';
+
+dotenv.config();
 
 export default function FaQList({ addClass }) {
     const [openFaq, setOpenFaq] = useState([]);
