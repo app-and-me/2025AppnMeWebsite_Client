@@ -17,14 +17,14 @@
 
 .slideImg {
     width: 402px;
-    height: 312px;
+    height: 270px;
     border-radius: 24px;
 }
 
 @media (max-width: 1200px) {
     .slideImg {
         width: 350px;
-        height: 290px;
+        height: 250px;
     }
 }
 
