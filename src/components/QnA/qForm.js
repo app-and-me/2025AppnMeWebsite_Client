@@ -46,7 +46,7 @@ export default function QForm() {
                 },
             })
             console.log("응답 data: ", response.data)
-            alert("글이 작성되었습니다!")
+            //alert("글이 작성되었습니다!")
             navigate('/QnA')
             setFormData({ content: "", password: "" })
         } catch (error) {
