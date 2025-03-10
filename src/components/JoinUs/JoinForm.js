@@ -93,7 +93,8 @@ export default function JoinForm() {
         console.log("작성된 form data보기 : ", formData)
 
         try {
-            const response = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/api/apply`, formData, {
+            const response = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/api/apply`,
+                formData, {
                 headers: {
                     'Content-Type': 'application/json'
                 }
