@@ -63,11 +63,9 @@ export default function HomePage() {
             <div className={styles.styleContainer}><Project /></div>
 
             <div style={{ marginBottom: "100px" }}><Bottom /></div>
-            <SectionBlock dotTitle={"Tools"} title1={"우리가 사용 / 배우는 툴"} subTitle1={"선배와 후배가 함께하는 스터디를 꾸준히 진행하여 부원들의"}
+            <SectionBlock dotTitle={"Tools"} title1={"앱앤미의 기술 스택"} subTitle1={"선배와 후배가 함께하는 스터디를 꾸준히 진행하여 부원들의"}
                 subTitle2={"실력 향상에 도움이 되고자 합니다. "} marginTop={"10px"} marginBottom={"40px"} />
             <div className={styles.styleContainer}><LanguageCard /></div>
-
-
 
             <div className={styles.styleContainer}>
                 <MainActivity />
