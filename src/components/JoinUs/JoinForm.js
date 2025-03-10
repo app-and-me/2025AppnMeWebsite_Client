@@ -93,7 +93,8 @@ export default function JoinForm() {
         console.log("작성된 form data보기 : ", formData)
 
         try {
-            const response = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/api/apply`, formData, {
+            const response = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/api/apply`,
+                formData, {
                 headers: {
                     'Content-Type': 'application/json'
                 }
@@ -241,7 +242,7 @@ export default function JoinForm() {
                     disabled={isPastDeadline}
                     required
                 />
-                <div style={{ margin: "30px 0", fontSize: "14px" }}>
+                <div style={{ margin: "15px 0", fontSize: "14px" }}>
                     {formData.motivate.length}/300
                 </div>
 

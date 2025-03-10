@@ -46,6 +46,10 @@ select {
 }
 
 
+select:focus option {
+    background-color: black;
+    color: white;
+}
 
 .questionBox {
     height: 170px;
@@ -116,18 +120,20 @@ textarea::placeholder {
     transition: all 0.8s ease-out;
 }
 
-@media (max-width: 1200px) {
-
-}
+@media (max-width: 1200px) {}
 
 @media (max-width: 700px) {
+    .container {
+        border-radius: 50px;
+    }
 
     .borderContainer {
         padding: 0px;
+        border-radius: 50px;
     }
 
     form {
-        padding: 0 10px;
+        padding: 0 30px;
     }
 
     .firstLine {

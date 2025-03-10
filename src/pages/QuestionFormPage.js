@@ -4,6 +4,7 @@ import Footer from "../components/Common/Footer"
 import Bottom from "../components/Common/Bottom"
 import QForm from "../components/QnA/qForm"
 import Header from "../components/Common/TopHeader"
+import Banner from "../components/Home/MainTitle/Banner"
 
 import { useRef } from "react";
 import { motion } from "framer-motion";
@@ -19,6 +20,7 @@ export default function QuestionForm() {
     return (
         <div>
             <Header />
+            <Banner height={"70%"} />
             <div style={{ marginTop: "130px" }}>
                 <TitleCard
                     btnHeight={"28px"} btnWeight={"46px"} borderRadius={"6px"} fontSize={"12px"} btnText={"2025"}
@@ -26,7 +28,7 @@ export default function QuestionForm() {
                     subTitle1={"자유롭게 질문해주세요!"}
                 /></div>
 
-            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", margin: "38px 0 136px 0" }}>
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", margin: "38px 0 136px 0", zIndex: "1" }}>
                 <Button width={"156px"} height={"46px"} text={"Fill The Form Out!"} borderRadius={"10px"} onClick={scrollToForm} />
             </div>
 
