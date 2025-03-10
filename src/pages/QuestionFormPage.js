@@ -33,7 +33,7 @@ export default function QuestionForm() {
             </div>
 
             {/* 질문 폼 */}
-            <motion.div ref={formRef} initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: 0.5 } }}>
+            <motion.div ref={formRef} initial={{ opacity: 0 }} animate={{ opacity: 1, zIndex: "10", position: "relative", transition: { duration: 0.5 } }}>
                 <QForm />
             </motion.div>
 
