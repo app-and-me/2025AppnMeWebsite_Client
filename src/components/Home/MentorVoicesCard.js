@@ -7,7 +7,7 @@ export default function MentorVoicesCard() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch("/data/mentorData.json");
+                const response = await fetch("/Data/mentorData.json");
                 const data = await response.json();
                 setMentorData(data); // 상태에 데이터 저장
             } catch (error) {
