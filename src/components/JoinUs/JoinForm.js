@@ -100,7 +100,7 @@ export default function JoinForm() {
                 }
             });
             console.log("서버 응답", response.data);
-            alert("신청이 완료 되었습니다!");
+            //alert("신청이 완료 되었습니다!");
             navigate('/')
             window.scrollTo({ top: 0, behavior: "smooth" })
 
