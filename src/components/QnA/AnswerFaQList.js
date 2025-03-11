@@ -17,11 +17,11 @@ export default function FaQList({ addClass }) {
         axios
             .get(`${process.env.REACT_APP_API_BASE_URL}/api/qna`)
             .then((response) => {
-                console.log("가져온 데이터 확인 : ", response.data);
+                //console.log("가져온 데이터 확인 : ", response.data);
                 setFaqs(response.data.data);
             })
             .catch((error) => {
-                console.error("faq 데이터를 가져오는 중 오류 발생함: ", error);
+                //console.error("faq 데이터를 가져오는 중 오류 발생함: ", error);
             });
     }, []);
 
