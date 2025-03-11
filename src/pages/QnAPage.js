@@ -17,8 +17,8 @@ export default function QnAPage() {
     return (
         <div>
             <Header />
-            <Banner height={"70%"} />
             <div className={styles["all-container"]}>
+                <Banner height={"70%"} />
                 <TitleCard
                     btnText={"14기"} btnWeight={"41px"} btnHeight={"28px"} borderRadius={"6px"} fontSize={"12px"}
                     infoTitle="Let's Work Together"

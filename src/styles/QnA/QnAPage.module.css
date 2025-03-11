@@ -4,6 +4,8 @@
     align-items: center;
     text-align: center;
     margin-top: 130px;
+    z-index: 1;
+    position: relative;
 }
 
 .qna-container {

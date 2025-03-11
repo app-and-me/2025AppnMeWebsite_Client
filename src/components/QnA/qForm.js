@@ -31,7 +31,7 @@ export default function QForm() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(formData)
+        //console.log(formData)
         if (isPastDeadline) {
             alert('질문 기간이 끝났습니다.')
             return;
@@ -45,12 +45,12 @@ export default function QForm() {
                     "Content-Type": "application/json",
                 },
             })
-            console.log("응답 data: ", response.data)
+            //console.log("응답 data: ", response.data)
             //alert("글이 작성되었습니다!")
             navigate('/QnA')
             setFormData({ content: "", password: "" })
         } catch (error) {
-            console.error(error)
+            //console.error(error)
             alert("error 발생")
         }
     }
