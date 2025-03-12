@@ -69,7 +69,7 @@ export default function JoinForm() {
         const MAX_LENGTH = {
             student_number: 4,
             five_letters: 5,
-            motivate: 510,
+            motivate: 1000,
         };
 
         if (MAX_LENGTH[name] && value.length > MAX_LENGTH[name]) return;
@@ -237,13 +237,13 @@ export default function JoinForm() {
                     name="motivate"
                     value={formData.motivate}
                     onChange={handleChange}
-                    maxLength={510}
-                    placeholder="지원동기를 작성해주세요(최대 510자)"
+                    maxLength={1000}
+                    placeholder="지원동기를 작성해주세요(최대 300자)"
                     disabled={isPastDeadline}
                     required
                 />
                 <div style={{ margin: "15px 0", fontSize: "14px" }}>
-                    {formData.motivate.length}/510
+                    {formData.motivate.length}/300
                 </div>
 
                 <button type="submit" className={styles.submitButton}>제출하기</button>
