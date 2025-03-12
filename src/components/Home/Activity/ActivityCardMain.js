@@ -18,7 +18,6 @@ export default function ActivityCardMain() {
                     content={"앱앤미 동아리 부원들과 팀을 구성해 스마틴 앱 챌린지 공모전에 참여했습니다."}
                     src={"03.png"}
                     className={styles["secondImg"]}
-                    showButton={false}
                 />
                 <ActivityInfoCard
                     title={"SW 동행 챌린지 해커톤"}
