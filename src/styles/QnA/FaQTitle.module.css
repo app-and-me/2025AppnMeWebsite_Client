@@ -39,9 +39,10 @@
 }
 
 @media (max-width:700px) {
-    /* .allContainer {
-        padding: 0 50px;
-    } */
+    .subTitle {
+        margin: 20px 0 40px 0;
+
+    }
 }
 
 @media (max-width:600px) {

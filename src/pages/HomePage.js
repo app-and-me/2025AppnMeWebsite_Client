@@ -63,8 +63,12 @@ export default function HomePage() {
             <div className={styles.styleContainer}><Project /></div>
 
             <div style={{ marginBottom: "100px" }}><Bottom /></div>
-            <SectionBlock dotTitle={"Tools"} title1={"앱앤미의 기술 스택"} subTitle1={"선배와 후배가 함께하는 스터디를 꾸준히 진행하여 부원들의"}
-                subTitle2={"실력 향상에 도움이 되고자 합니다. "} marginTop={"10px"} marginBottom={"40px"} />
+
+            <div className={styles.stack}>
+                <SectionBlock dotTitle={"Tools"} title1={"앱앤미의 기술 스택"}
+                    subTitle1={"선배와 후배가 함께하는 스터디를 꾸준히 진행하여 부원들의"}
+                    subTitle2={"실력 향상에 도움이 되고자 합니다. "} marginTop={"10px"} marginBottom={"40px"} />
+            </div>
             <div className={styles.styleContainer}><LanguageCard /></div>
 
             <div className={styles.styleContainer}>
@@ -74,10 +78,11 @@ export default function HomePage() {
 
             <OurPrize />
 
-            <SectionBlock dotTitle={"Photo"} title1={"앱앤미의 친목 사진"}
-                subTitle1={"선후배 간의 격식없이 다같이 친한 동아리로, 다양한 활동을 통해 선배들과 이야기를 하며 친목을 다져 더욱 친밀하고 가까운 사이입니다."}
-
-                marginTop={"10px"} marginBottom={"65px"} />
+            <div className={styles.photo}>
+                <SectionBlock dotTitle={"Photo"} title1={"앱앤미의 친목 사진"}
+                    subTitle1={"선후배 간의 격식없이 다같이 친한 동아리로, 다양한 활동을 통해 선배들과 이야기를 하며 친목을 다져 더욱 친밀하고 가까운 사이입니다."}
+                    marginTop={"10px"} marginBottom={"65px"} />
+            </div>
             <div className={styles.styleContainer}>
                 <div className={styles.PhotoContainer}>
                     <Photo start={"0%"} end={"-100%"} images={[1, 2, 3, 4]} />
