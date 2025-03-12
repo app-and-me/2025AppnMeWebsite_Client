@@ -69,7 +69,7 @@ export default function JoinForm() {
         const MAX_LENGTH = {
             student_number: 4,
             five_letters: 5,
-            motivate: 1000,
+            motivate: 300,
         };
 
         if (MAX_LENGTH[name] && value.length > MAX_LENGTH[name]) return;
@@ -237,7 +237,7 @@ export default function JoinForm() {
                     name="motivate"
                     value={formData.motivate}
                     onChange={handleChange}
-                    maxLength={1000}
+                    maxLength={300}
                     placeholder="지원동기를 작성해주세요(최대 300자)"
                     disabled={isPastDeadline}
                     required
