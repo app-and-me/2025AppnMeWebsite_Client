@@ -54,7 +54,7 @@ export default function SectionBlock({ dotTitle, title1, title2, subTitle1, subT
         </MarginStyle>
         <Content title1={subTitle1} title2={subTitle2} marginTop={marginTop} />
         {dotTitle === "Testimonial" && (
-          <Button width={"192px"} height={"46px"} borderRadius={"10px"} text={"앱앤미 부원 소개 보러가기"} onClick={handleClick} />
+          <Button width={"192px"} height={"46px"} borderRadius={"10px"} text={"앱앤미 부원 소개 보러가기"} onClick={handleClick} margin={"35px 0 0 0"} />
         )}
       </div>
 

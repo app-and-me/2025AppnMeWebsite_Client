@@ -45,4 +45,12 @@
         margin-top: 0;
     }
 
+    .photo,
+    .stack {
+        padding: 0 30px;
+    }
+
+    .content {
+        display: inline-block;
+    }
 }

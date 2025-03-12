@@ -38,8 +38,22 @@ export default function AboutUsPage() {
         };
     }, []);
 
-    const Member12 = ["추다율", "윤주영", "배주연", "황유진", "하지민", "송유빈"]
-    const Member13 = ["지수민", "이효은", "유성윤", "강재호", "이서현", "송지아"]
+    const Member12 = [
+        { name: "추다율", github: "https://github.com/dayul" },
+        { name: "윤주영", github: "https://github.com/juyoung07" },
+        { name: "배주연", github: "https://github.com/juyeon-Bae" },
+        { name: "황유진", github: "https://github.com/hofkj" },
+        { name: "하지민", github: "https://www.instagram.com/hovynq/" },
+        { name: "송유빈", github: "https://www.instagram.com/sonououorn.xo/" }
+    ];
+    const Member13 = [
+        { name: "지수민", github: "https://github.com/cuzurmyhabit" },
+        { name: "이효은", github: "https://github.com/Hyotaccato" },
+        { name: "유성윤", github: "https://github.com/3x-haust" },
+        { name: "강재호", github: "https://github.com/jaehokang1007" },
+        { name: "이서현", github: "https://www.instagram.com/zush.ol/" },
+        { name: "송지아", github: "https://www.instagram.com/soo_g81/" }
+    ];
     return (
         <div>
             <Header />
@@ -67,8 +81,10 @@ export default function AboutUsPage() {
 
                 <div>
                     <div className={styles.profileContainer}>
-                        {Member12.map((item) => (
-                            <img className={styles["profile-img"]} src={`images/Member/12-${item}.png`}></img>
+                        {Member12.map((member) => (
+                            <a href={member.github} target="_blank" key={member.name}>
+                                <img className={styles["profile-img"]} src={`images/Member/12-${member.name}.png`} />
+                            </a>
                         ))}
                     </div>
                 </div>
@@ -80,12 +96,15 @@ export default function AboutUsPage() {
                 <div>
                     <div className={styles.profileContainer}>
                         {Member13.map((item) => (
-                            <img className={styles["profile-img"]} src={`images/Member/13-${item}.png`}></img>
+                            <a href={item.github} target="_blank" >
+                                <img className={styles["profile-img"]} src={`images/Member/13-${item.name}.png`}></img>
+                            </a>
                         ))}
                     </div>
                 </div>
-
-                <Bottom />
+                <div className={styles.bottom}>
+                    <Bottom />
+                </div>
                 <div className={styles.faqContainer}>
                     <FaQ />
                 </div>

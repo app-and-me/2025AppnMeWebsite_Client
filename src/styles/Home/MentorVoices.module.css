@@ -33,6 +33,7 @@
 }
 
 .message {
+    word-break: keep-all;
     margin-top: 20px;
     width: 100%;
     line-height: 1.5;

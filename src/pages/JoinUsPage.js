@@ -36,6 +36,7 @@ export default function JoinUSPage() {
                         height={"46px"}
                         borderRadius={"10px"}
                         onClick={scrollToForm}
+                        margin={"20px 0 0 0"}
                     />
                 </div>
                 <motion.div ref={formRef} initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: 0.5 } }}>
