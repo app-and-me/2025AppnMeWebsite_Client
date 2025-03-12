@@ -69,7 +69,7 @@ export default function JoinForm() {
         const MAX_LENGTH = {
             student_number: 4,
             five_letters: 5,
-            motivate: 300,
+            motivate: 510,
         };
 
         if (MAX_LENGTH[name] && value.length > MAX_LENGTH[name]) return;
@@ -90,7 +90,7 @@ export default function JoinForm() {
         }
 
 
-        console.log("작성된 form data보기 : ", formData)
+        //console.log("작성된 form data보기 : ", formData)
 
         try {
             const response = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/api/apply`,
@@ -99,7 +99,7 @@ export default function JoinForm() {
                     'Content-Type': 'application/json'
                 }
             });
-            console.log("서버 응답", response.data);
+            //console.log("서버 응답", response.data);
             //alert("신청이 완료 되었습니다!");
             navigate('/')
             window.scrollTo({ top: 0, behavior: "smooth" })
@@ -237,13 +237,13 @@ export default function JoinForm() {
                     name="motivate"
                     value={formData.motivate}
                     onChange={handleChange}
-                    maxLength={300}
-                    placeholder="지원동기를 작성해주세요(최대 300자)"
+                    maxLength={510}
+                    placeholder="지원동기를 작성해주세요(최대 510자)"
                     disabled={isPastDeadline}
                     required
                 />
                 <div style={{ margin: "15px 0", fontSize: "14px" }}>
-                    {formData.motivate.length}/300
+                    {formData.motivate.length}/510
                 </div>
 
                 <button type="submit" className={styles.submitButton}>제출하기</button>
